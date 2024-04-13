@@ -1,7 +1,8 @@
-[gd_scene load_steps=44 format=3 uid="uid://duriewur2gonr"]
+[gd_scene load_steps=45 format=3 uid="uid://duriewur2gonr"]
 
 [ext_resource type="Texture2D" uid="uid://byqouqurwj2y1" path="res://resources/level/map.png" id="1_0hgvy"]
 [ext_resource type="Texture2D" uid="uid://b6o8ryj1de2xv" path="res://resources/level/TM.png" id="2_c3i3c"]
+[ext_resource type="Script" path="res://Scripts/Judete.gd" id="2_hr183"]
 [ext_resource type="Texture2D" uid="uid://b3kkewfg3yqj1" path="res://resources/level/PH.png" id="2_mjljg"]
 [ext_resource type="Texture2D" uid="uid://j1pug3f345tt" path="res://resources/level/AR.png" id="3_0nfh5"]
 [ext_resource type="Texture2D" uid="uid://cy3v0c8upkuxy" path="res://resources/level/SM.png" id="4_fkp7y"]
@@ -62,6 +63,7 @@ texture = ExtResource("1_0hgvy")
 expand_mode = 1
 
 [node name="Judete" type="Node2D" parent="TextureRect"]
+script = ExtResource("2_hr183")
 
 [node name="PH" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(503, 371)
