@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://duriewur2gonr"]
+[gd_scene load_steps=2 format=3 uid="uid://duriewur2gonr"]
+
+[ext_resource type="Texture2D" uid="uid://byqouqurwj2y1" path="res://resources/level/map.png" id="1_0hgvy"]
 
 [node name="Node" type="Node"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0hgvy")
+expand_mode = 1
