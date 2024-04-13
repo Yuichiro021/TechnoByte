@@ -1,6 +1,7 @@
-[gd_scene load_steps=45 format=3 uid="uid://duriewur2gonr"]
+[gd_scene load_steps=48 format=3 uid="uid://duriewur2gonr"]
 
 [ext_resource type="Texture2D" uid="uid://byqouqurwj2y1" path="res://resources/level/map.png" id="1_0hgvy"]
+[ext_resource type="Texture2D" uid="uid://d0167ut5lwf74" path="res://resources/backgrounds/white.png" id="1_a8x5o"]
 [ext_resource type="Texture2D" uid="uid://b6o8ryj1de2xv" path="res://resources/level/TM.png" id="2_c3i3c"]
 [ext_resource type="Script" path="res://Scripts/Judete.gd" id="2_hr183"]
 [ext_resource type="Texture2D" uid="uid://j1pug3f345tt" path="res://resources/level/AR.png" id="3_0nfh5"]
@@ -43,18 +44,28 @@
 [ext_resource type="Texture2D" uid="uid://fav874tjyajr" path="res://resources/level/BR.png" id="41_h5cp4"]
 [ext_resource type="Texture2D" uid="uid://d2uwtgvbn82ee" path="res://resources/level/TL.png" id="42_r2a0r"]
 [ext_resource type="Texture2D" uid="uid://bomw3jutfrc4p" path="res://resources/level/CT.png" id="43_krtn0"]
-[ext_resource type="Texture2D" uid="uid://cfjcgp8krdn86" path="res://resources/main_menu/menu_background.png" id="44_ov42c"]
+[ext_resource type="Texture2D" uid="uid://dedq0xtadxfbk" path="res://resources/icons/car.png" id="45_nk5fa"]
+[ext_resource type="Texture2D" uid="uid://bpdjhoywl45gl" path="res://resources/icons/tree.png" id="46_7vt8c"]
+[ext_resource type="Texture2D" uid="uid://ccykui8x3mww3" path="res://resources/icons/pesticide.png" id="47_xr5x0"]
 
 [node name="Node" type="Node"]
 
+[node name="TextureRect2" type="TextureRect" parent="."]
+z_index = -1
+offset_top = 1.0
+offset_right = 1024.0
+offset_bottom = 579.0
+texture = ExtResource("1_a8x5o")
+expand_mode = 1
+
 [node name="TextureRect" type="TextureRect" parent="."]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -288.0
-offset_right = 850.0
-offset_bottom = 288.0
-grow_vertical = 2
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -425.0
+offset_right = 425.0
+offset_bottom = 576.0
+grow_horizontal = 2
 texture = ExtResource("1_0hgvy")
 expand_mode = 1
 
@@ -62,6 +73,7 @@ expand_mode = 1
 script = ExtResource("2_hr183")
 
 [node name="PH" type="Sprite2D" parent="TextureRect/Judete"]
+z_index = 1
 position = Vector2(503, 371)
 scale = Vector2(0.721591, 0.653821)
 
@@ -331,6 +343,7 @@ position = Vector2(-6.10352e-05, -1.52948)
 polygon = PackedVector2Array(25.5, -56.5, 30.5, -56.5, 30.5, -55.5, 32.5, -55.5, 32.5, -42.5, 33.5, -42.5, 33.5, -39.5, 34.5, -39.5, 34.5, -37.5, 35.5, -37.5, 35.5, -36.5, 36.5, -36.5, 36.5, -33.5, 37.5, -33.5, 37.5, -30.5, 38.5, -30.5, 38.5, -9.5, 39.5, -9.5, 39.5, -6.5, 40.5, -6.5, 40.5, -3.5, 41.5, -3.5, 41.5, -0.5, 42.4, -0.5, 43.4, 3.5, 44.5, 3.5, 44.5, 24.3, 42.5, 25.3, 42.5, 27.5, 41.5, 27.5, 41.5, 33.5, 42.5, 33.5, 42.5, 35.5, 43.3, 35.5, 44.3, 37.5, 45.5, 37.5, 45.5, 39.5, 46.5, 39.5, 46.5, 41.5, 47.5, 41.5, 47.5, 43.5, 48.5, 43.5, 48.5, 45.5, 49.5, 45.5, 49.5, 48.5, 48.5, 48.5, 48.5, 54.5, 45.5, 54.5, 45.5, 55.5, 42.5, 55.5, 42.5, 56.5, 40.5, 56.5, 40.5, 57.5, 8.5, 57.5, 8.5, 56.5, -4.5, 56.5, -4.5, 55.5, -6.5, 55.5, -6.5, 54.3, -8.5, 53.3, -8.5, 52.5, -9.5, 52.5, -9.5, 51.5, -10.5, 51.5, -10.5, 50.5, -11.5, 50.5, -11.5, 49.5, -12.5, 49.5, -12.5, 48.5, -14.5, 48.5, -14.5, 47.5, -16.5, 47.5, -16.5, 46.5, -18.5, 46.5, -18.5, 45.5, -21.5, 45.5, -21.5, 44.5, -24.5, 44.5, -24.5, 41.5, -25.5, 41.5, -25.5, 38.5, -26.5, 38.5, -26.5, 29.5, -27.5, 29.5, -27.5, 26.5, -28.5, 26.5, -28.5, 24.5, -29.3, 24.5, -30.3, 22.5, -31.5, 22.5, -31.5, 21.5, -32.5, 21.5, -32.5, 20.5, -33.5, 20.5, -33.5, 19.5, -34.5, 19.5, -34.5, 18.5, -35.5, 18.5, -35.5, 17.5, -36.5, 17.5, -36.5, 16.5, -37.5, 16.5, -37.5, 14.5, -38.5, 14.5, -38.5, 12.5, -39.5, 12.5, -39.5, 10.5, -40.5, 10.5, -40.5, 1.5, -41.5, 1.5, -41.5, -1.5, -42.5, -1.5, -42.5, -3.5, -43.3, -3.5, -44.3, -5.5, -45.5, -5.5, -45.5, -7.5, -46.5, -7.5, -46.5, -9.5, -47.5, -9.5, -47.5, -11.5, -48.5, -11.5, -48.5, -13.5, -49.5, -13.5, -49.5, -15.5, -50.5, -15.5, -50.5, -17.5, -51.5, -17.5, -51.5, -19.5, -52.5, -19.5, -52.5, -21.5, -53.5, -21.5, -53.5, -23.5, -54.5, -23.5, -54.5, -25.5, -55.5, -25.5, -55.5, -27.5, -56.5, -27.5, -56.5, -30.5, -57.5, -30.5, -57.5, -41.5, -54.5, -41.5, -54.5, -42.5, -52.5, -42.5, -52.5, -43.5, -50.5, -43.5, -50.5, -44.5, -48.5, -44.5, -48.5, -45.5, -46.5, -45.5, -46.5, -46.5, -44.5, -46.5, -44.5, -47.5, -43.5, -47.5, -43.5, -48.3, -41.5, -49.3, -41.5, -50.5, -40.5, -50.5, -40.5, -51.5, -39.5, -51.5, -39.5, -52.5, -35.5, -52.5, -35.5, -43.5, -34.5, -43.5, -34.5, -40.5, -33.5, -40.5, -33.5, -38.5, -32.7, -38.5, -31.7, -36.5, -30.5, -36.5, -30.5, -35.5, -28.5, -35.5, -28.5, -34.5, -25.5, -34.5, -25.5, -33.5, -24.5, -33.5, -24.5, -34.5, -21.5, -34.5, -21.5, -35.5, -19.5, -35.5, -19.5, -36.3, -17.5, -37.3, -17.5, -38.5, -16.5, -38.5, -16.5, -40.5, -15.5, -40.5, -15.5, -42.5, -14.5, -42.5, -14.5, -44.5, -13.5, -44.5, -13.5, -46.5, -12.3, -46.5, -11.3, -48.5, -10.5, -48.5, -10.5, -50.5, -9.5, -50.5, -9.5, -52.3, -7.5, -53.3, -7.5, -54.5, -1.5, -54.5, -1.5, -55.5, 1.5, -55.5, 1.5, -56.5, 6.5, -56.5, 6.5, -57.5, 25.5, -57.5)
 
 [node name="DB" type="Sprite2D" parent="TextureRect/Judete"]
+z_index = 1
 position = Vector2(460, 386)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("34_iodsb")
@@ -423,25 +436,11 @@ wait_time = 0.1
 autostart = true
 
 [node name="side_menu" type="Node2D" parent="."]
-position = Vector2(1024, 0)
-
-[node name="TextureRect" type="TextureRect" parent="side_menu"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -187.0
-offset_bottom = 579.0
-grow_horizontal = 0
-texture = ExtResource("44_ov42c")
-expand_mode = 1
+position = Vector2(866, 21)
 
 [node name="MarginContainer" type="MarginContainer" parent="side_menu"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -187.0
-offset_bottom = 172.0
-grow_horizontal = 0
+offset_right = 192.0
+offset_bottom = 239.0
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
@@ -449,7 +448,7 @@ theme_override_constants/margin_bottom = 12
 
 [node name="VBoxContainer" type="VBoxContainer" parent="side_menu/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 60
+theme_override_constants/separation = 0
 
 [node name="Separator" type="Control" parent="side_menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -476,3 +475,34 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_font_sizes/font_size = 24
 text = "0"
+
+[node name="icon_menu" type="Node2D" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="icon_menu"]
+z_index = 1
+offset_right = 175.0
+offset_bottom = 214.0
+
+[node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer"]
+self_modulate = Color(1, 0.270588, 0.52549, 1)
+layout_mode = 2
+texture = ExtResource("1_a8x5o")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="icon_menu/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="icon_menu/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("45_nk5fa")
+
+[node name="TextureRect2" type="TextureRect" parent="icon_menu/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("46_7vt8c")
+
+[node name="TextureRect3" type="TextureRect" parent="icon_menu/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("47_xr5x0")
