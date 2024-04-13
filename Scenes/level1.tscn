@@ -61,213 +61,215 @@ grow_vertical = 2
 texture = ExtResource("1_0hgvy")
 expand_mode = 1
 
-[node name="PH" type="Sprite2D" parent="TextureRect"]
+[node name="Judete" type="Node2D" parent="TextureRect"]
+
+[node name="PH" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(503, 371)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("2_mjljg")
 
-[node name="TM" type="Sprite2D" parent="TextureRect"]
+[node name="TM" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(108, 298.5)
 scale = Vector2(0.721804, 0.66092)
 texture = ExtResource("2_c3i3c")
 
-[node name="AR" type="Sprite2D" parent="TextureRect"]
+[node name="AR" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(136.5, 233.5)
 scale = Vector2(0.7375, 0.639706)
 texture = ExtResource("3_0nfh5")
 
-[node name="SM" type="Sprite2D" parent="TextureRect"]
+[node name="SM" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(243.485, 79.8932)
 scale = Vector2(0.723711, 0.653133)
 texture = ExtResource("4_fkp7y")
 
-[node name="BH" type="Sprite2D" parent="TextureRect"]
+[node name="BH" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(176.5, 161)
 scale = Vector2(0.759259, 0.679612)
 texture = ExtResource("5_o23tf")
 
-[node name="MM" type="Sprite2D" parent="TextureRect"]
+[node name="MM" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(334.102, 87)
 scale = Vector2(0.724762, 0.666667)
 texture = ExtResource("6_goa80")
 
-[node name="SJ" type="Sprite2D" parent="TextureRect"]
+[node name="SJ" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(267.167, 140.5)
 scale = Vector2(0.747685, 0.663265)
 texture = ExtResource("7_km7mt")
 
-[node name="CS" type="Sprite2D" parent="TextureRect"]
+[node name="CS" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(157.5, 364.5)
 scale = Vector2(0.721591, 0.637755)
 texture = ExtResource("8_1qmss")
 
-[node name="CJ" type="Sprite2D" parent="TextureRect"]
+[node name="CJ" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(286, 171)
 scale = Vector2(0.721591, 0.637755)
 texture = ExtResource("9_inm2c")
 
-[node name="MH" type="Sprite2D" parent="TextureRect"]
+[node name="MH" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(214, 422.38)
 scale = Vector2(0.721591, 0.633484)
 texture = ExtResource("9_to0q7")
 
-[node name="DJ" type="Sprite2D" parent="TextureRect"]
+[node name="DJ" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(285, 469)
 scale = Vector2(0.721591, 0.633484)
 texture = ExtResource("10_3i2sl")
 
-[node name="GJ" type="Sprite2D" parent="TextureRect"]
+[node name="GJ" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(264, 382)
 scale = Vector2(0.721591, 0.633484)
 texture = ExtResource("11_r2bk3")
 
-[node name="HD" type="Sprite2D" parent="TextureRect"]
+[node name="HD" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(244, 290)
 scale = Vector2(0.721591, 0.633484)
 texture = ExtResource("12_4g3po")
 
-[node name="AB" type="Sprite2D" parent="TextureRect"]
+[node name="AB" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(284, 261)
 scale = Vector2(0.721591, 0.633484)
 texture = ExtResource("13_6ha3s")
 
-[node name="MS" type="Sprite2D" parent="TextureRect"]
+[node name="MS" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(383, 203.81)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("14_ak4sh")
 
-[node name="SB" type="Sprite2D" parent="TextureRect"]
+[node name="SB" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(355, 282)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("15_gnhwy")
 
-[node name="VL" type="Sprite2D" parent="TextureRect"]
+[node name="VL" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(337, 375)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("18_4lf74")
 
-[node name="OT" type="Sprite2D" parent="TextureRect"]
+[node name="OT" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(359, 462)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("19_n8tf5")
 
-[node name="BN" type="Sprite2D" parent="TextureRect"]
+[node name="BN" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(374, 142)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("20_47bfn")
 
-[node name="TR" type="Sprite2D" parent="TextureRect"]
+[node name="TR" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(427, 486)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("21_y6psi")
 
-[node name="AG" type="Sprite2D" parent="TextureRect"]
+[node name="AG" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(404, 380)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("22_ilhn5")
 
-[node name="BV" type="Sprite2D" parent="TextureRect"]
+[node name="BV" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(448, 293)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("23_odbg7")
 
-[node name="HR" type="Sprite2D" parent="TextureRect"]
+[node name="HR" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(464, 202)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("24_ha8uw")
 
-[node name="CV" type="Sprite2D" parent="TextureRect"]
+[node name="CV" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(493, 282)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("25_gyg3y")
 
-[node name="SV" type="Sprite2D" parent="TextureRect"]
+[node name="SV" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(485, 103)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("26_on82t")
 
-[node name="BT" type="Sprite2D" parent="TextureRect"]
+[node name="BT" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(559, 67)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("27_y4g45")
 
-[node name="BC" type="Sprite2D" parent="TextureRect"]
+[node name="BC" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(562, 226)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("28_asv8p")
 
-[node name="IS" type="Sprite2D" parent="TextureRect"]
+[node name="IS" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(610, 136)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("29_xo4po")
 
-[node name="NT" type="Sprite2D" parent="TextureRect"]
+[node name="NT" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(538, 164)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("30_ub2vl")
 
-[node name="VS" type="Sprite2D" parent="TextureRect"]
+[node name="VS" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(642, 218)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("31_a22o3")
 
-[node name="VN" type="Sprite2D" parent="TextureRect"]
+[node name="VN" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(579, 295)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("32_uua0r")
 
-[node name="GL" type="Sprite2D" parent="TextureRect"]
+[node name="GL" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(649, 295)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("33_llm4k")
 
-[node name="DB" type="Sprite2D" parent="TextureRect"]
+[node name="DB" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(460, 386)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("34_iodsb")
 
-[node name="BZ" type="Sprite2D" parent="TextureRect"]
+[node name="BZ" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(564, 350)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("35_m76fu")
 
-[node name="GR" type="Sprite2D" parent="TextureRect"]
+[node name="GR" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(499, 480)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("36_8yk12")
 
-[node name="IF" type="Sprite2D" parent="TextureRect"]
+[node name="IF" type="Sprite2D" parent="TextureRect/Judete"]
 show_behind_parent = true
 position = Vector2(514, 435)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("37_tk6j4")
 
-[node name="B" type="Sprite2D" parent="TextureRect"]
+[node name="B" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(514, 441)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("38_0gbwd")
 
-[node name="IL" type="Sprite2D" parent="TextureRect"]
+[node name="IL" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(603, 429)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("39_2yvxp")
 
-[node name="CL" type="Sprite2D" parent="TextureRect"]
+[node name="CL" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(600, 460)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("40_3ok2y")
 
-[node name="BR" type="Sprite2D" parent="TextureRect"]
+[node name="BR" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(638, 366)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("41_h5cp4")
 
-[node name="TL" type="Sprite2D" parent="TextureRect"]
+[node name="TL" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(744, 374)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("42_r2a0r")
 
-[node name="CT" type="Sprite2D" parent="TextureRect"]
+[node name="CT" type="Sprite2D" parent="TextureRect/Judete"]
 position = Vector2(683, 462)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("43_krtn0")
