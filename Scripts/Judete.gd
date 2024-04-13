@@ -60,6 +60,17 @@ func create_sediu():
 	child1.set_meta("sediu",true)
 	timer.start()
 
+func clear_all_buttons():
+	var ok=true
+	if active_button !=null:
+		ok=false
+		active_button.queue_free()
+	if not butoane_sediu.is_empty():
+		for buton in butoane_sediu:
+			buton.queue_free()
+			butoane_sediu=[]
+			ok=false
+	return ok
 func _input(event):
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index==MOUSE_BUTTON_LEFT:
 		for child in get_children():
@@ -70,14 +81,8 @@ func _input(event):
 					for point in collision_polygon.polygon:
 						global_points.append(point+ child.global_position)
 					if is_point_inside_concave_shape(event.position,global_points):
-						if active_button !=null:
-							active_button.queue_free()
-						elif not butoane_sediu.is_empty():
-							for buton in butoane_sediu:
-								buton.queue_free()
-							butoane_sediu=[]
-						else:
-							if child.get_meta("sediu")==false and points>=10:
+						if(clear_all_buttons()):
+							if child.get_meta("sediu")==false and points>=10 and sediu_exista==false:
 								print("Clicked on: ",child.get_name())
 								create_child_button(child)
 							if sediu_exista==true and child.get_meta("sediu")==true:
@@ -88,7 +93,8 @@ func create_child_button(child):
 	button.text = "Creare Sediu"
 	button.add_theme_font_size_override("font_size",32)
 	button.size = Vector2(50,50)
-	button.position.x+=50
+	button.position.y+=50
+	button.position.x-=100
 	child1 = child
 	button.z_index=10
 	button.button_down.connect(create_sediu)
