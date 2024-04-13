@@ -48,6 +48,7 @@ func create_sediu():
 	sediu.texture=textura
 	child1.add_child(sediu)
 	child1.set_meta("sediu",true)
+	timer.start()
 
 func _input(event):
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index==MOUSE_BUTTON_LEFT:
@@ -61,13 +62,17 @@ func _input(event):
 					if is_point_inside_concave_shape(event.position,global_points):
 						if active_button !=null:
 							active_button.queue_free()
+						elif not butoane_sediu.is_empty():
+							for buton in butoane_sediu:
+								buton.queue_free()
+							butoane_sediu=[]
 						else:
 							if child.get_meta("sediu")==false and sediu_exista == false:
 								print("Clicked on: ",child.get_name())
 								create_child_button(child)
 								lower_pollution(child)
-							elif child.get_meta("sediu")==true:
-								meniu_sediu()
+							if sediu_exista==true and child.get_meta("sediu")==true:
+								meniu_sediu(child)
 
 func create_child_button(child):
 	var button := Button.new()
@@ -99,5 +104,37 @@ func is_point_inside_concave_shape(point, shape_points) -> bool:
 	# If the number of intersections is odd, the point is inside the shape
 	return intersections % 2 == 1
 	
-func meniu_sediu():
+var butoane_sediu = []
+
+func create_sediu_button(xpoz,ypoz,function,path,child):
+	var button = Button.new()
+	button.icon = load(path)
+	button.set_size(Vector2(25,25))
+	button.z_index=10
+	button.button_down.connect(function)
+	button.position.y+=ypoz
+	button.position.x-=xpoz
+	butoane_sediu.append(button)
+	child.add_child(button)
+
+func meniu_sediu(child):
+	create_sediu_button(150,50,buton_car,"res://resources/icons/car.png",child)
+	create_sediu_button(75,50,buton_tree,"res://resources/icons/tree.png",child)
+	create_sediu_button(0,50,buton_pesticide,"res://resources/icons/pesticide.png",child)
+	create_sediu_button(-75,50,buton_water,"res://resources/icons/water.png",child)
+	create_sediu_button(-150,50,buton_factory,"res://resources/icons/factory.png",child)
+
+func buton_car():
+	pass
+
+func buton_tree():
+	pass
+
+func buton_pesticide():
+	pass
+
+func buton_water():
+	pass
+
+func buton_factory():
 	pass
