@@ -5,12 +5,16 @@ var lista_texte = [
 lor ajută la conservarea re-
 surselor finite, garanteaza, de
 asemenea că deșeurile nu
-ajung în ape sau în natură", 
+ajung în ape sau în natură.", 
 "Dacă folosești bicicleta în
 loc de masină, faci o mare fa-
 voare mediului. Dacă nu, ajută
 și mijlocul de transport in comun.",
-"Este imp"
+"Se spune că în viață trebuie să 
+faci măcar trei lucruri: să plan-
+tezi un copac, să clădești o casă
+și să faci măcar un copil!Așa că 
+ia exemplul și plantează un copac."
 ]
 
 var nr_text=randi_range(0, lista_texte.size()-1)
