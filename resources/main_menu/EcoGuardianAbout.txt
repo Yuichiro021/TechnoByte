@@ -1,0 +1,14 @@
+Developed by: TechnoByte, 2024
+Icons by: Icons8 (hyperlink: http://icons8.com/icons)
+
+
+
+Tips:
+EcoGuardian este un joc de strategie și învățare prin intermediul căreia este simulată o campanie de ecologizare pe care utilizatorul o coordonează. Jocul pornește cu harta unei țări în care nivelul de poluare crește, iar jucătorul își selectează regiunea în care va avea baza. Acesta trebuie să ia decizii pentru a-și crește reputația și a ecologiza zona. Fiecare decizie îl costă pe jucător puncte eco. Ulterior, jucătorul își extinde campania, scopul fiind reducerea substanțială a nivelului de poluare din țară.
+Opțiuni:
+- redu numărul de mașini
+- plantează copaci
+- redu pesticidele
+- epurează apa
+- redu fabricile
+

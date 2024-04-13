@@ -13,19 +13,20 @@ texture = ExtResource("2_pqiva")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="."]
-offset_left = 401.0
-offset_top = 61.0
-offset_right = 608.0
-offset_bottom = 198.0
+offset_left = 394.0
+offset_top = -6.0
+offset_right = 601.0
+offset_bottom = 131.0
 theme_override_font_sizes/font_size = 100
 text = "TIPS"
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 165.0
-offset_top = 185.0
-offset_right = 965.0
-offset_bottom = 521.0
+offset_left = 109.0
+offset_top = 100.0
+offset_right = 909.0
+offset_bottom = 436.0
 theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
 
 [node name="back_button" type="Button" parent="."]
 anchors_preset = 8
