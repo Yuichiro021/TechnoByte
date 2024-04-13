@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://duriewur2gonr"]
+[gd_scene load_steps=49 format=3 uid="uid://duriewur2gonr"]
 
 [ext_resource type="Texture2D" uid="uid://byqouqurwj2y1" path="res://resources/level/map.png" id="1_0hgvy"]
 [ext_resource type="Texture2D" uid="uid://d0167ut5lwf74" path="res://resources/backgrounds/white.png" id="1_a8x5o"]
@@ -71,6 +71,7 @@ texture = ExtResource("1_0hgvy")
 expand_mode = 1
 
 [node name="Judete" type="Node2D" parent="TextureRect"]
+z_index = 2
 script = ExtResource("2_hr183")
 
 [node name="PH" type="Sprite2D" parent="TextureRect/Judete"]
@@ -482,8 +483,8 @@ text = "0"
 
 [node name="MarginContainer" type="MarginContainer" parent="icon_menu"]
 z_index = 1
-offset_right = 175.0
-offset_bottom = 214.0
+offset_right = 181.0
+offset_bottom = 289.0
 
 [node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer"]
 self_modulate = Color(1, 0.270588, 0.52549, 1)
@@ -500,6 +501,13 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("45_nk5fa")
+
+[node name="Label" type="Label" parent="icon_menu/MarginContainer/HBoxContainer/VBoxContainer/TextureRect"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 12.0
+offset_right = 112.0
+offset_bottom = 69.0
 
 [node name="TextureRect2" type="TextureRect" parent="icon_menu/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
