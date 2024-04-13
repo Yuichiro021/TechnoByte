@@ -4,8 +4,6 @@
 
 [node name="Node" type="Node"]
 
-[node name="Area2D" type="Area2D" parent="."]
-
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
