@@ -5,9 +5,9 @@ extends Node2D
 
 @onready var timer = $"../../Timer" as Timer
 
-@onready var points = 10
+@onready var points = 5
 
-@onready var reputation=0
+@onready var reputation=10
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
