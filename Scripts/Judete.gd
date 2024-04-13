@@ -7,6 +7,8 @@ extends Node2D
 
 @onready var points = 10
 
+@onready var reputation=0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var label := $"../../side_menu/MarginContainer/VBoxContainer/Label/Label2" as Label
@@ -140,16 +142,32 @@ func meniu_sediu(child):
 	create_sediu_button(-150,50,buton_factory,"res://resources/icons/factory.png",child)
 
 func buton_car():
+	if points >= 4:
+		points-=4
+		reputation+=4
 	pass
 
 func buton_tree():
+	if points >=2:
+		points-=2
+		reputation+=2
 	pass
 
 func buton_pesticide():
+	if points>=3 :
+		points-=3
+		reputation+=3
 	pass
 
 func buton_water():
+	if points >=5:
+		points-=5
+		reputation+=5
+	
 	pass
 
 func buton_factory():
+	if points >=6:
+		points -=6
+		reputation+=6
 	pass
