@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://duriewur2gonr"]
+[gd_scene load_steps=52 format=3 uid="uid://duriewur2gonr"]
 
 [ext_resource type="Texture2D" uid="uid://d0167ut5lwf74" path="res://resources/backgrounds/white.png" id="1_a8x5o"]
 [ext_resource type="Texture2D" uid="uid://bqpg0jp0dhqrw" path="res://resources/level/HartaRo.png" id="2_7b3rj"]
@@ -45,10 +45,12 @@
 [ext_resource type="Texture2D" uid="uid://fav874tjyajr" path="res://resources/level/BR.png" id="41_h5cp4"]
 [ext_resource type="Texture2D" uid="uid://d2uwtgvbn82ee" path="res://resources/level/TL.png" id="42_r2a0r"]
 [ext_resource type="Texture2D" uid="uid://bomw3jutfrc4p" path="res://resources/level/CT.png" id="43_krtn0"]
-[ext_resource type="Texture2D" uid="uid://dedq0xtadxfbk" path="res://resources/icons/car.png" id="45_nk5fa"]
 [ext_resource type="Texture2D" uid="uid://bpdjhoywl45gl" path="res://resources/icons/tree.png" id="46_7vt8c"]
-[ext_resource type="Texture2D" uid="uid://c0g0hdqb32qvk" path="res://resources/level/cutie2.png" id="46_o5qyr"]
+[ext_resource type="Texture2D" uid="uid://dnegdc6warnbo" path="res://resources/icons/car-new.png" id="47_q8str"]
 [ext_resource type="Texture2D" uid="uid://ccykui8x3mww3" path="res://resources/icons/pesticide.png" id="47_xr5x0"]
+[ext_resource type="Texture2D" uid="uid://bm5xntjty5few" path="res://resources/icons/water.png" id="50_j883l"]
+[ext_resource type="Texture2D" uid="uid://br1ggnd7j6ce7" path="res://resources/level/cutie3.png" id="51_kgdte"]
+[ext_resource type="Texture2D" uid="uid://rgxk7xhqs2xb" path="res://resources/icons/factory.png" id="51_pblnv"]
 
 [node name="Node" type="Node"]
 
@@ -483,33 +485,47 @@ text = "0"
 
 [node name="icon_menu" type="Node2D" parent="."]
 
-[node name="MarginContainer" type="MarginContainer" parent="icon_menu"]
-z_index = 1
-offset_right = 181.0
-offset_bottom = 579.0
+[node name="TextureRect2" type="TextureRect" parent="icon_menu"]
+z_index = 2
+offset_left = 2.0
+offset_top = 110.0
+offset_right = 66.0
+offset_bottom = 174.0
+texture = ExtResource("46_7vt8c")
 
-[node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer"]
-self_modulate = Color(1, 0.270588, 0.52549, 1)
-layout_mode = 2
-texture = ExtResource("46_o5qyr")
-expand_mode = 1
+[node name="TextureRect3" type="TextureRect" parent="icon_menu"]
+z_index = 2
+offset_left = 2.0
+offset_top = 184.0
+offset_right = 66.0
+offset_bottom = 244.0
+texture = ExtResource("47_xr5x0")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="icon_menu/MarginContainer"]
-layout_mode = 2
+[node name="TextureRect4" type="TextureRect" parent="icon_menu"]
+z_index = 2
+offset_left = 1.0
+offset_top = 250.0
+offset_right = 65.0
+offset_bottom = 314.0
+texture = ExtResource("50_j883l")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="icon_menu"]
-z_index = 1
-offset_left = 17.0
-offset_top = 55.0
-offset_right = 81.0
-offset_bottom = 634.0
-scale = Vector2(0.8, 0.8)
+[node name="TextureRect5" type="TextureRect" parent="icon_menu"]
+z_index = 2
+offset_left = 9.0
+offset_top = 320.0
+offset_right = 73.0
+offset_bottom = 384.0
+texture = ExtResource("51_pblnv")
 
-[node name="TextureRect" type="TextureRect" parent="icon_menu/VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("45_nk5fa")
+[node name="TextureRect" type="TextureRect" parent="icon_menu"]
+z_index = 2
+offset_left = 5.0
+offset_top = 42.0
+offset_right = 69.0
+offset_bottom = 106.0
+texture = ExtResource("47_q8str")
 
-[node name="Label" type="Label" parent="icon_menu/VBoxContainer/TextureRect"]
+[node name="Label" type="Label" parent="icon_menu/TextureRect"]
 layout_mode = 0
 offset_left = 69.0
 offset_top = 12.0
@@ -520,10 +536,80 @@ theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 30
 text = "- Car"
 
-[node name="TextureRect2" type="TextureRect" parent="icon_menu/VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("46_7vt8c")
+[node name="MarginContainer" type="MarginContainer" parent="icon_menu"]
+z_index = 1
+offset_top = 39.0
+offset_right = 181.0
+offset_bottom = 119.0
+scale = Vector2(1, 0.875)
 
-[node name="TextureRect3" type="TextureRect" parent="icon_menu/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="icon_menu/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("47_xr5x0")
+
+[node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("51_kgdte")
+
+[node name="MarginContainer2" type="MarginContainer" parent="icon_menu"]
+z_index = 1
+offset_top = 108.0
+offset_right = 181.0
+offset_bottom = 188.0
+scale = Vector2(1, 0.875)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="icon_menu/MarginContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer2"]
+layout_mode = 2
+texture = ExtResource("51_kgdte")
+
+[node name="MarginContainer3" type="MarginContainer" parent="icon_menu"]
+z_index = 1
+offset_top = 178.0
+offset_right = 181.0
+offset_bottom = 258.0
+scale = Vector2(1, 0.875)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="icon_menu/MarginContainer3"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer3"]
+layout_mode = 2
+texture = ExtResource("51_kgdte")
+
+[node name="MarginContainer4" type="MarginContainer" parent="icon_menu"]
+z_index = 1
+offset_top = 248.0
+offset_right = 181.0
+offset_bottom = 328.0
+scale = Vector2(1, 0.875)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="icon_menu/MarginContainer4"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer4"]
+layout_mode = 2
+texture = ExtResource("51_kgdte")
+
+[node name="MarginContainer5" type="MarginContainer" parent="icon_menu"]
+z_index = 1
+offset_top = 318.0
+offset_right = 181.0
+offset_bottom = 398.0
+scale = Vector2(1, 0.875)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="icon_menu/MarginContainer5"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer5"]
+layout_mode = 2
+texture = ExtResource("51_kgdte")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="icon_menu"]
+z_index = 1
+offset_left = 15.0
+offset_top = 50.0
+offset_right = 79.0
+offset_bottom = 629.0
+scale = Vector2(0.8, 0.8)
