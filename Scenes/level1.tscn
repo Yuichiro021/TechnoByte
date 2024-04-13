@@ -1,14 +1,109 @@
-[gd_scene load_steps=2 format=3 uid="uid://duriewur2gonr"]
+[gd_scene load_steps=16 format=3 uid="uid://duriewur2gonr"]
 
 [ext_resource type="Texture2D" uid="uid://byqouqurwj2y1" path="res://resources/level/map.png" id="1_0hgvy"]
+[ext_resource type="Texture2D" uid="uid://b6o8ryj1de2xv" path="res://resources/level/TM.png" id="2_c3i3c"]
+[ext_resource type="Texture2D" uid="uid://j1pug3f345tt" path="res://resources/level/AR.png" id="3_0nfh5"]
+[ext_resource type="Texture2D" uid="uid://cy3v0c8upkuxy" path="res://resources/level/SM.png" id="4_fkp7y"]
+[ext_resource type="Texture2D" uid="uid://dt7o58n5msmtx" path="res://resources/level/BH.png" id="5_o23tf"]
+[ext_resource type="Texture2D" uid="uid://lm8pbrob7k4d" path="res://resources/level/MM.png" id="6_goa80"]
+[ext_resource type="Texture2D" uid="uid://dkp5pu8ketbd0" path="res://resources/level/SJ.png" id="7_km7mt"]
+[ext_resource type="Texture2D" uid="uid://dlroxvj60tj2j" path="res://resources/level/CS.png" id="8_1qmss"]
+[ext_resource type="Texture2D" uid="uid://uywnyxrc737n" path="res://resources/level/MH.png" id="9_to0q7"]
+[ext_resource type="Texture2D" uid="uid://bk7er7g4sg8oy" path="res://resources/level/DJ.png" id="10_3i2sl"]
+[ext_resource type="Texture2D" uid="uid://dylxo8oqgbt4u" path="res://resources/level/GJ.png" id="11_r2bk3"]
+[ext_resource type="Texture2D" uid="uid://b7qh2wscg77vd" path="res://resources/level/HD.png" id="12_4g3po"]
+[ext_resource type="Texture2D" uid="uid://d0b6n4xovjf44" path="res://resources/level/AB.png" id="13_6ha3s"]
+[ext_resource type="Texture2D" uid="uid://du86dlj6dl4ou" path="res://resources/level/MS.png" id="14_ak4sh"]
+[ext_resource type="Texture2D" uid="uid://bxebws5eow2c3" path="res://resources/level/SB.png" id="15_gnhwy"]
 
 [node name="Node" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -425.0
+offset_top = -288.0
+offset_right = 425.0
+offset_bottom = 288.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_0hgvy")
 expand_mode = 1
+
+[node name="TM" type="Sprite2D" parent="."]
+position = Vector2(195, 298.5)
+scale = Vector2(0.721804, 0.66092)
+texture = ExtResource("2_c3i3c")
+
+[node name="AR" type="Sprite2D" parent="."]
+position = Vector2(223.5, 233.5)
+scale = Vector2(0.7375, 0.639706)
+texture = ExtResource("3_0nfh5")
+
+[node name="SM" type="Sprite2D" parent="."]
+position = Vector2(330.485, 79.8932)
+scale = Vector2(0.723711, 0.653133)
+texture = ExtResource("4_fkp7y")
+
+[node name="BH" type="Sprite2D" parent="."]
+position = Vector2(263.5, 161)
+scale = Vector2(0.759259, 0.679612)
+texture = ExtResource("5_o23tf")
+
+[node name="MM" type="Sprite2D" parent="."]
+position = Vector2(421.102, 87)
+scale = Vector2(0.724762, 0.666667)
+texture = ExtResource("6_goa80")
+
+[node name="SJ" type="Sprite2D" parent="."]
+position = Vector2(354.167, 140.5)
+scale = Vector2(0.747685, 0.663265)
+texture = ExtResource("7_km7mt")
+
+[node name="CS" type="Sprite2D" parent="."]
+position = Vector2(244.5, 364.5)
+scale = Vector2(0.721591, 0.637755)
+texture = ExtResource("8_1qmss")
+
+[node name="MH" type="Sprite2D" parent="."]
+position = Vector2(301, 422.38)
+scale = Vector2(0.721591, 0.633484)
+texture = ExtResource("9_to0q7")
+
+[node name="DJ" type="Sprite2D" parent="."]
+position = Vector2(372, 469)
+scale = Vector2(0.721591, 0.633484)
+texture = ExtResource("10_3i2sl")
+
+[node name="GJ" type="Sprite2D" parent="."]
+position = Vector2(351, 382)
+scale = Vector2(0.721591, 0.633484)
+texture = ExtResource("11_r2bk3")
+
+[node name="HD" type="Sprite2D" parent="."]
+position = Vector2(331, 290)
+scale = Vector2(0.721591, 0.633484)
+texture = ExtResource("12_4g3po")
+
+[node name="AB" type="Sprite2D" parent="."]
+position = Vector2(371, 261)
+scale = Vector2(0.721591, 0.633484)
+texture = ExtResource("13_6ha3s")
+
+[node name="MS" type="Sprite2D" parent="."]
+position = Vector2(470, 203.81)
+scale = Vector2(0.721591, 0.653821)
+texture = ExtResource("14_ak4sh")
+
+[node name="SB" type="Sprite2D" parent="."]
+position = Vector2(442, 282)
+scale = Vector2(0.721591, 0.653821)
+texture = ExtResource("15_gnhwy")
+
+[node name="VL" type="Sprite2D" parent="."]
+position = Vector2(442, 282)
+scale = Vector2(0.721591, 0.653821)
+texture = ExtResource("15_gnhwy")
