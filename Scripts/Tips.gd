@@ -19,11 +19,24 @@ ia exemplul și plantează un copac."
 
 var nr_text=randi_range(0, lista_texte.size()-1)
 
+@onready var back_button := $back_button as Button
+@onready var start_button := $start_button as Button
+
+@onready var level := preload("res://Scenes/level1.tscn") as PackedScene
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var label = $Label2
 	label.text = lista_texte[nr_text]
+	start_button.button_down.connect(press_start_button)
+	back_button.button_down.connect(press_back_button)
 	pass # Replace with function body.
+
+func press_back_button():
+	get_tree().change_scene_to_file("res://main_menu/main_menu.tscn")
+	
+func press_start_button():
+	get_tree().change_scene_to_packed(level)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
