@@ -27,7 +27,6 @@ losești un autovehicul personal.
 încearcă să dai acest sfat și altora
 Deoarece doar împreună putem schimba
 această problemă in amintire",#6
-"",
 ]
 
 var nr_text=randi_range(0, lista_texte.size()-1)
