@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtl6rw5m3bqbs"]
+
+[ext_resource type="Script" path="res://Scripts/Tips.gd" id="1_fg2ko"]
+[ext_resource type="Texture2D" uid="uid://cfjcgp8krdn86" path="res://resources/main_menu/menu_background.png" id="2_pqiva"]
+
+[node name="Tips" type="Node2D"]
+script = ExtResource("1_fg2ko")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1024.0
+offset_bottom = 576.0
+texture = ExtResource("2_pqiva")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 401.0
+offset_top = 61.0
+offset_right = 608.0
+offset_bottom = 198.0
+theme_override_font_sizes/font_size = 100
+text = "TIPS"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 165.0
+offset_top = 185.0
+offset_right = 965.0
+offset_bottom = 521.0
+theme_override_font_sizes/font_size = 50
+
+[node name="back_button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = 474.0
+offset_right = 198.0
+offset_bottom = 565.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 60
+text = "Back"
+
+[node name="start_button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 819.0
+offset_top = 471.0
+offset_right = 1005.0
+offset_bottom = 562.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 60
+text = "Start"

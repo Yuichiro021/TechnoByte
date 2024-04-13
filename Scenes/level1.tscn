@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://duriewur2gonr"]
+[gd_scene load_steps=45 format=3 uid="uid://duriewur2gonr"]
 
 [ext_resource type="Texture2D" uid="uid://byqouqurwj2y1" path="res://resources/level/map.png" id="1_0hgvy"]
 [ext_resource type="Texture2D" uid="uid://b6o8ryj1de2xv" path="res://resources/level/TM.png" id="2_c3i3c"]
@@ -43,6 +43,7 @@
 [ext_resource type="Texture2D" uid="uid://fav874tjyajr" path="res://resources/level/BR.png" id="41_h5cp4"]
 [ext_resource type="Texture2D" uid="uid://d2uwtgvbn82ee" path="res://resources/level/TL.png" id="42_r2a0r"]
 [ext_resource type="Texture2D" uid="uid://bomw3jutfrc4p" path="res://resources/level/CT.png" id="43_krtn0"]
+[ext_resource type="Texture2D" uid="uid://cfjcgp8krdn86" path="res://resources/main_menu/menu_background.png" id="44_ov42c"]
 
 [node name="Node" type="Node"]
 
@@ -420,3 +421,58 @@ polygon = PackedVector2Array(0.5, -79.3, 2.5, -78.3, 2.5, -77.5, 4.5, -77.5, 4.5
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
 autostart = true
+
+[node name="side_menu" type="Node2D" parent="."]
+position = Vector2(1024, 0)
+
+[node name="TextureRect" type="TextureRect" parent="side_menu"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -187.0
+offset_bottom = 579.0
+grow_horizontal = 0
+texture = ExtResource("44_ov42c")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="side_menu"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -187.0
+offset_bottom = 172.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="side_menu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Separator" type="Control" parent="side_menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="side_menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 24
+text = "Points:           "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="side_menu/MarginContainer/VBoxContainer/Label"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -70.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 24
+text = "0"
