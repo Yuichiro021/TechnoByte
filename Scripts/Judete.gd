@@ -4,10 +4,12 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	for child in get_children():
 		child.set_meta("Pollution",1)
 	for child in get_children():
 		print(child.name," ",child.get_meta("Pollution"))
+	set_process_input(true)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,10 +18,15 @@ func _process(delta):
 
 func _input(event):
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index==MOUSE_BUTTON_LEFT:
-			for child in get_children():
-				if child is Sprite2D:
-					var global_position = child.global_position
-					var size = child.texture.get_size()
-					var rect = Rect2(global_position,size)
-					if rect.has_point(get_global_mouse_position()):
-						print("Clicked on: ",child.name)
+		var click_registered = false
+		for child in get_children():
+			if child is Sprite2D:
+				var collision_polygon = child.get_node("CollisionPolygon2D")
+				if collision_polygon!=null:
+					var global_points=[]
+					for point in collision_polygon.polygon:
+						global_points.append(point+ child.global_position)
+					if Geometry2D.is_point_in_polygon(event.position,global_points):
+						if not click_registered:
+							print("Clicked on: ",child.get_name())
+							click_registered = true
