@@ -27,6 +27,7 @@ func increase_pollution():
 	if !sedii.is_empty():
 		for sediu in sedii:
 			lower_pollution(sediu)
+	points += randi_range(1, 7)
 	var sprite = get_child(rng.randi_range(0, get_children().size()-1))
 	sprite.set_meta("Pollution",sprite.get_meta("Pollution") +1)
 	print(sprite.name, " ", sprite.get_meta("Pollution"))
