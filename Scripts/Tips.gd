@@ -14,7 +14,12 @@ voare mediului. Dacă nu, ajută
 faci măcar trei lucruri: să plan-
 tezi un copac, să clădești o casă
 și să faci măcar un copil!Așa că 
-ia exemplul și plantează un copac."
+ia exemplul și plantează un copac.",
+"Renunțând la produsele din plastic 
+de unică folosință, poți reduce can-
+titatea de deșeuri plastice care po-
+luează oceanele și mediul",
+
 ]
 
 var nr_text=randi_range(0, lista_texte.size()-1)
