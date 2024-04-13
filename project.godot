@@ -10,9 +10,15 @@ config_version=5
 
 [application]
 
-config/name="Test"
+config/name="TechnoByte"
+run/main_scene="res://main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=576
 
 [rendering]
 
