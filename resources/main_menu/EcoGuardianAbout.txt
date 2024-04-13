@@ -9,4 +9,6 @@ Opțiuni:
 - redu numărul de mașini
 - plantează copaci
 - redu pesticidele
+- epurează apa
+- redu fabricile
 
