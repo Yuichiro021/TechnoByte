@@ -275,3 +275,6 @@ texture = ExtResource("42_r2a0r")
 position = Vector2(683, 462)
 scale = Vector2(0.721591, 0.653821)
 texture = ExtResource("43_krtn0")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
