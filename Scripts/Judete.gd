@@ -11,6 +11,7 @@ extends Node2D
 func _ready():
 	for child in get_children():
 		child.set_meta("Pollution",0)
+		child.set_meta("sediu",false)
 		child.self_modulate = Color(118.0/255.0, 137.0/255.0, 72.0/255.0, 0.0)
 	#for child in get_children():
 	#	print(child.name," ",child.get_meta("Pollution"))
@@ -36,11 +37,20 @@ func _process(delta):
 
 var active_button = null
 
+var child1 = null
+
+var sediu_exista = false
+
+func create_sediu():
+	sediu_exista = true
+	var sediu := TextureRect.new()
+	var textura = load("res://resources/level/sediu.png")
+	sediu.texture=textura
+	child1.add_child(sediu)
+	child1.set_meta("sediu",true)
+
 func _input(event):
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index==MOUSE_BUTTON_LEFT:
-		if active_button !=null:
-			active_button.queue_free()
-		var click_registered = false
 		for child in get_children():
 			if child is Sprite2D:
 				var collision_polygon = child.get_node("CollisionPolygon2D")
@@ -48,15 +58,46 @@ func _input(event):
 					var global_points=[]
 					for point in collision_polygon.polygon:
 						global_points.append(point+ child.global_position)
-					if Geometry2D.is_point_in_polygon(event.position,global_points):
-						if not click_registered:
-							print("Clicked on: ",child.get_name())
-							create_child_button(child)
-							lower_pollution(child)
-							click_registered = true
+					if is_point_inside_concave_shape(event.position,global_points):
+						if active_button !=null:
+							active_button.queue_free()
+						else:
+							if child.get_meta("sediu")==false and sediu_exista == false:
+								print("Clicked on: ",child.get_name())
+								create_child_button(child)
+								lower_pollution(child)
+							elif child.get_meta("sediu")==true:
+								meniu_sediu()
 
 func create_child_button(child):
 	var button := Button.new()
-	button.text = str("Creare Sediu")
-	child.add_child(button)
+	button.text = "Creare Sediu"
+	button.add_theme_font_size_override("font_size",32)
+	button.size = Vector2(50,50)
+	button.position.x+=50
+	child1 = child
+	button.z_index=10
+	button.button_down.connect(create_sediu)
 	active_button = button
+	child.add_child(button)
+
+func is_point_inside_concave_shape(point, shape_points) -> bool:
+	var intersections = 0
+
+	for i in range(shape_points.size()):
+		var p1 = shape_points[i]
+		var p2 = shape_points[(i + 1) % shape_points.size()]
+
+		# Check if the edge intersects with the horizontal line passing through the point
+		if (p1.y < point.y && p2.y >= point.y) || (p2.y < point.y && p1.y >= point.y):
+			# Calculate the intersection point's x-coordinate
+			var intersection_x = p1.x + (point.y - p1.y) / (p2.y - p1.y) * (p2.x - p1.x)
+			# Check if the intersection point is to the right of the point
+			if intersection_x > point.x:
+				intersections += 1
+
+	# If the number of intersections is odd, the point is inside the shape
+	return intersections % 2 == 1
+	
+func meniu_sediu():
+	pass
