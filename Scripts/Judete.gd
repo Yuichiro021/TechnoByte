@@ -31,9 +31,12 @@ func _process(delta):
 	pass
 	#print( rng.randi_range(0,get_children().size() - 1) );
 
+var active_button = null
 
 func _input(event):
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index==MOUSE_BUTTON_LEFT:
+		if active_button !=null:
+			active_button.queue_free()
 		var click_registered = false
 		for child in get_children():
 			if child is Sprite2D:
@@ -45,5 +48,12 @@ func _input(event):
 					if Geometry2D.is_point_in_polygon(event.position,global_points):
 						if not click_registered:
 							print("Clicked on: ",child.get_name())
+							create_child_button(child)
 							lower_pollution(child)
 							click_registered = true
+
+func create_child_button(child):
+	var button := Button.new()
+	button.text = str("Creare Sediu")
+	child.add_child(button)
+	active_button = button
