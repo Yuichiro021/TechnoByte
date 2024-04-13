@@ -26,7 +26,11 @@ func _process(delta):
 
 
 func _input(event):
-	if event is InputEventMouseButton:
-		if event.button_index == 1:
+	if event is InputEventMouseButton and event.is_pressed() and event.button_index==MOUSE_BUTTON_LEFT:
 			for child in get_children():
-				print(child.position.x, " ", child.position.y)
+				if child is Sprite2D:
+					var global_position = child.global_position
+					var size = child.texture.get_size()
+					var rect = Rect2(global_position,size)
+					if rect.has_point(get_global_mouse_position()):
+						print("Clicked on: ",child.name)
