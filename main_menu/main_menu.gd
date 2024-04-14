@@ -4,7 +4,7 @@ extends Control
 @onready var start_button = $MarginContainer/HBoxContainer/VBoxContainer/Start_Button as Button
 @onready var exit_button = $MarginContainer/HBoxContainer/VBoxContainer/Exit_Button as Button
 
-var start_level = preload("res://Scenes/tips.tscn") as PackedScene
+var start_level = preload("res://Scenes/tips_new.tscn") as PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

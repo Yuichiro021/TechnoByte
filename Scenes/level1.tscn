@@ -452,8 +452,9 @@ position = Vector2(866, 21)
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -225.0
-offset_bottom = 239.0
+offset_left = -280.0
+offset_top = 1.0
+offset_bottom = 143.0
 grow_horizontal = 0
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
@@ -469,11 +470,11 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_font_sizes/font_size = 24
-text = "Points:           "
+theme_override_font_sizes/font_size = 30
+text = "Points:        "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -484,24 +485,25 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -7.0
-offset_top = -16.0
-offset_right = 63.0
-offset_bottom = 18.0
+offset_left = 16.0
+offset_top = -20.0
+offset_right = 52.0
+offset_bottom = 22.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 30
 text = "0"
+horizontal_alignment = 2
 
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_font_sizes/font_size = 24
-text = "Reputation:           "
+theme_override_font_sizes/font_size = 30
+text = "Reputation:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -512,16 +514,17 @@ anchor_left = 0.734
 anchor_top = 0.5
 anchor_right = 0.734
 anchor_bottom = 0.5
-offset_left = -7.53401
-offset_top = -16.0
-offset_right = 22.466
-offset_bottom = 18.0
-grow_horizontal = 2
+offset_left = 56.688
+offset_top = -19.0
+offset_right = 93.688
+offset_bottom = 23.0
+grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 30
 text = "0"
+horizontal_alignment = 2
 
 [node name="icon_menu" type="Node2D" parent="."]
 

@@ -7,7 +7,7 @@
 script = ExtResource("1_fg2ko")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1024.0
+offset_right = 1647.0
 offset_bottom = 576.0
 texture = ExtResource("2_pqiva")
 expand_mode = 1
