@@ -7,7 +7,7 @@ extends Node2D
 
 @onready var points = 5
 
-@onready var reputation=10
+@onready var reputation=100
 
 var mesaj_pe_ecran = false
 
@@ -34,6 +34,8 @@ func change_points(val):
 func change_reputation(val):
 	if reputation+val>0:
 		reputation+=val
+	else:
+		reputation = 0
 	var label := $"../../MarginContainer/VBoxContainer/Label2/Label2" as Label
 	label.text = str(reputation)
 
@@ -74,7 +76,7 @@ var sediu_exista = false
 
 func create_sediu():
 	if sediu_exista:
-		change_points(-10)
+		change_points(-40)
 	sedii.append(child1)
 	sediu_exista = true
 	var sediu := TextureRect.new()
@@ -106,7 +108,7 @@ func _input(event):
 						global_points.append(point+ child.global_position)
 					if is_point_inside_concave_shape(event.position,global_points):
 						if(clear_all_buttons()):
-							if child.get_meta("sediu")==false and (sediu_exista==false or points>=10):
+							if child.get_meta("sediu")==false and (sediu_exista==false or points>=40):
 								print("Clicked on: ",child.get_name())
 								
 								create_child_button(child)
