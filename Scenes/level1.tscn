@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://duriewur2gonr"]
+[gd_scene load_steps=52 format=3 uid="uid://duriewur2gonr"]
 
 [ext_resource type="Texture2D" uid="uid://d0167ut5lwf74" path="res://resources/backgrounds/white.png" id="1_a8x5o"]
 [ext_resource type="Texture2D" uid="uid://bqpg0jp0dhqrw" path="res://resources/level/HartaRo.png" id="2_7b3rj"]
@@ -45,9 +45,12 @@
 [ext_resource type="Texture2D" uid="uid://fav874tjyajr" path="res://resources/level/BR.png" id="41_h5cp4"]
 [ext_resource type="Texture2D" uid="uid://d2uwtgvbn82ee" path="res://resources/level/TL.png" id="42_r2a0r"]
 [ext_resource type="Texture2D" uid="uid://bomw3jutfrc4p" path="res://resources/level/CT.png" id="43_krtn0"]
-[ext_resource type="Texture2D" uid="uid://dedq0xtadxfbk" path="res://resources/icons/car.png" id="45_nk5fa"]
 [ext_resource type="Texture2D" uid="uid://bpdjhoywl45gl" path="res://resources/icons/tree.png" id="46_7vt8c"]
+[ext_resource type="Texture2D" uid="uid://dnegdc6warnbo" path="res://resources/icons/car-new.png" id="47_q8str"]
 [ext_resource type="Texture2D" uid="uid://ccykui8x3mww3" path="res://resources/icons/pesticide.png" id="47_xr5x0"]
+[ext_resource type="Texture2D" uid="uid://bm5xntjty5few" path="res://resources/icons/water.png" id="50_j883l"]
+[ext_resource type="Texture2D" uid="uid://br1ggnd7j6ce7" path="res://resources/level/cutie3.png" id="51_kgdte"]
+[ext_resource type="Texture2D" uid="uid://rgxk7xhqs2xb" path="res://resources/icons/factory.png" id="51_pblnv"]
 
 [node name="Node" type="Node"]
 
@@ -64,9 +67,10 @@ z_index = 2
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -430.0
-offset_right = 375.0
-offset_bottom = 554.0
+offset_left = -307.0
+offset_top = 13.0
+offset_right = 498.0
+offset_bottom = 567.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 texture = ExtResource("2_7b3rj")
@@ -437,12 +441,13 @@ position = Vector2(0, -1.52942)
 polygon = PackedVector2Array(0.5, -79.3, 2.5, -78.3, 2.5, -77.5, 4.5, -77.5, 4.5, -76.5, 7.5, -76.5, 7.5, -75.5, 20.5, -75.5, 20.5, -74.5, 22.5, -74.5, 22.5, -72.5, 23.5, -72.5, 23.5, -69.5, 24.5, -69.5, 24.5, -67.5, 25.5, -67.5, 25.5, -66.5, 26.5, -66.5, 26.5, -64.5, 27.5, -64.5, 27.5, -63.5, 29.5, -63.5, 29.5, -62.5, 35.5, -62.5, 35.5, -63.5, 37.5, -63.5, 37.5, -64.5, 38.5, -64.5, 38.5, -65.5, 40.5, -65.5, 40.5, -64.5, 43.5, -64.5, 43.5, -63.5, 71.5, -63.5, 71.5, -59.5, 70.5, -59.5, 70.5, -42.5, 71.5, -42.5, 71.5, -39.5, 72.5, -39.5, 72.5, -37.5, 73.5, -37.5, 73.5, -36.5, 75.5, -36.5, 75.5, -35.5, 76.5, -35.5, 76.5, -33.5, 75.3, -33.5, 74.3, -31.5, 73.5, -31.5, 73.5, -30.5, 72.5, -30.5, 72.5, -28.5, 71.5, -28.5, 71.5, -26.5, 70.3, -26.5, 69.3, -24.5, 68.5, -24.5, 68.5, -23.5, 67.5, -23.5, 67.5, -22.5, 66.5, -22.5, 66.5, -21.5, 65.5, -21.5, 65.5, -20.5, 64.5, -20.5, 64.5, -19.5, 63.5, -19.5, 63.5, -18.5, 62.5, -18.5, 62.5, -17.5, 61.5, -17.5, 61.5, -16.5, 60.5, -16.5, 60.5, -14.5, 59.5, -14.5, 59.5, -11.5, 58.5, -11.5, 58.5, 1.5, 59.5, 1.5, 59.5, 4.5, 60.5, 4.5, 60.5, 33.5, 61.4, 33.5, 62.4, 39.5, 63.5, 39.5, 63.5, 42.5, 64.5, 42.5, 64.5, 47.5, 63.5, 47.5, 63.5, 50.5, 62.5, 50.5, 62.5, 55.5, 61.4, 55.5, 60.4, 61.5, 59.5, 61.5, 59.5, 64.5, 58.5, 64.5, 58.5, 67.5, 57.5, 67.5, 57.5, 70.5, 56.5, 70.5, 56.5, 80.5, 42.5, 80.5, 42.5, 79.5, 35.5, 79.5, 35.5, 78.5, 32.5, 78.5, 32.5, 77.5, 25.5, 77.5, 25.5, 78.5, 16.5, 78.5, 16.5, 77.5, 13.5, 77.5, 13.5, 76.5, 10.5, 76.5, 10.5, 75.5, 7.5, 75.5, 7.5, 74.5, 4.5, 74.5, 4.5, 73.5, 2.5, 73.5, 2.5, 72.5, 1.5, 72.5, 1.5, 71.5, -0.5, 71.5, -0.5, 70.5, -2.5, 70.5, -2.5, 69.5, -3.5, 69.5, -3.5, 68.3, -5.5, 67.3, -5.5, 66.5, -6.5, 66.5, -6.5, 65.5, -7.5, 65.5, -7.5, 63.5, -8.5, 63.5, -8.5, 60.5, -9.5, 60.5, -9.5, 57.5, -10.5, 57.5, -10.5, 53.5, -11.5, 53.5, -11.5, 50.5, -12.5, 50.5, -12.5, 48.5, -13.5, 48.5, -13.5, 47.5, -15.5, 47.5, -15.5, 46.5, -18.5, 46.5, -18.5, 45.5, -20.5, 45.5, -20.5, 46.5, -23.5, 46.5, -23.5, 47.5, -30.5, 47.5, -30.5, 48.5, -33.5, 48.5, -33.5, 49.5, -42.5, 49.5, -42.5, 48.5, -44.5, 48.5, -44.5, 47.5, -45.5, 47.5, -45.5, 46.3, -47.5, 45.3, -47.5, 44.5, -48.5, 44.5, -48.5, 43.5, -50.5, 43.5, -50.5, 42.5, -53.5, 42.5, -53.5, 41.5, -79.5, 41.5, -79.5, 40.5, -80.5, 40.5, -80.5, 39.5, -81.5, 39.5, -81.5, 38.5, -82.5, 38.5, -82.5, 37.5, -83.5, 37.5, -83.5, 36.3, -85.5, 35.3, -85.5, 34.5, -86.5, 34.5, -86.5, 32.5, -77.5, 32.5, -77.5, 31.5, -74.5, 31.5, -74.5, 30.5, -72.5, 30.5, -72.5, 29.5, -70.5, 29.5, -70.5, 28.5, -68.5, 28.5, -68.5, 27.5, -67.5, 27.5, -67.5, 26.5, -66.5, 26.5, -66.5, 25.7, -64.5, 24.7, -64.5, 23.5, -63.5, 23.5, -63.5, 22.5, -62.5, 22.5, -62.5, 21.5, -60.5, 21.5, -60.5, 20.5, -55.5, 20.5, -55.5, 19.5, -52.5, 19.5, -52.5, 18.5, -50.5, 18.5, -50.5, 17.5, -48.5, 17.5, -48.5, 16.5, -46.5, 16.5, -46.5, 15.5, -44.5, 15.5, -44.5, 14.5, -41.5, 14.5, -41.5, 13.5, -38.5, 13.5, -38.5, 12.5, -33.5, 12.5, -33.5, 11.5, -30.5, 11.5, -30.5, 10.5, -27.5, 10.5, -27.5, 9.5, -24.5, 9.5, -24.5, 8.5, -21.5, 8.5, -21.5, 7.5, -18.5, 7.5, -18.5, 6.5, -16.5, 6.5, -16.5, 5.5, -15.5, 5.5, -15.5, 4.5, -14.5, 4.5, -14.5, 3.7, -12.5, 2.7, -12.5, 1.5, -11.5, 1.5, -11.5, 0.5, -10.5, 0.5, -10.5, -1.5, -9.5, -1.5, -9.5, -3.3, -7.5, -4.3, -7.5, -5.5, -6.5, -5.5, -6.5, -7.5, -5.5, -7.5, -5.5, -9.5, -4.5, -9.5, -4.5, -11.5, -3.5, -11.5, -3.5, -13.5, -2.3, -13.5, -1.3, -15.5, -0.5, -15.5, -0.5, -16.5, 0.5, -16.5, 0.5, -17.5, 1.5, -17.5, 1.5, -19.5, 2.5, -19.5, 2.5, -22.5, 3.5, -22.5, 3.5, -33.5, 2.5, -33.5, 2.5, -36.5, 1.5, -36.5, 1.5, -38.5, 0.699997, -38.5, -0.300003, -40.5, -1.5, -40.5, -1.5, -41.5, -2.5, -41.5, -2.5, -42.5, -3.5, -42.5, -3.5, -43.5, -4.5, -43.5, -4.5, -44.5, -6.5, -44.5, -6.5, -59.5, -7.5, -59.5, -7.5, -62.5, -8.5, -62.5, -8.5, -64.5, -9.3, -64.5, -10.3, -66.5, -11.5, -66.5, -11.5, -67.5, -12.5, -67.5, -12.5, -68.5, -13.5, -68.5, -13.5, -69.5, -14.5, -69.5, -14.5, -71.5, -15.3, -71.5, -16.3, -73.5, -17.5, -73.5, -17.5, -75.5, -11.5, -75.5, -11.5, -76.5, -8.5, -76.5, -8.5, -77.5, -6.5, -77.5, -6.5, -78.3, -4.5, -79.3, -4.5, -80.5, 0.5, -80.5)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.2
+wait_time = 2.0
 
 [node name="side_menu" type="Node2D" parent="."]
 position = Vector2(866, 21)
 
 [node name="MarginContainer" type="MarginContainer" parent="side_menu"]
+offset_left = -33.0
 offset_right = 192.0
 offset_bottom = 239.0
 theme_override_constants/margin_left = 12
@@ -459,6 +464,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="side_menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_font_sizes/font_size = 24
@@ -468,12 +474,44 @@ vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="side_menu/MarginContainer/VBoxContainer/Label"]
 layout_mode = 1
-anchors_preset = 11
+anchors_preset = 6
 anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -70.0
+anchor_bottom = 0.5
+offset_left = -7.0
+offset_top = -16.0
+offset_right = 63.0
+offset_bottom = 18.0
 grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 24
+text = "0"
+
+[node name="Label2" type="Label" parent="side_menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 24
+text = "Reputation:           "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="side_menu/MarginContainer/VBoxContainer/Label2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.734
+anchor_top = 0.5
+anchor_right = 0.734
+anchor_bottom = 0.5
+offset_left = -7.53401
+offset_top = -16.0
+offset_right = 22.466
+offset_bottom = 18.0
+grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
@@ -482,28 +520,47 @@ text = "0"
 
 [node name="icon_menu" type="Node2D" parent="."]
 
-[node name="MarginContainer" type="MarginContainer" parent="icon_menu"]
-z_index = 1
-offset_right = 181.0
-offset_bottom = 289.0
+[node name="TextureRect2" type="TextureRect" parent="icon_menu"]
+z_index = 2
+offset_left = 2.0
+offset_top = 110.0
+offset_right = 66.0
+offset_bottom = 174.0
+texture = ExtResource("46_7vt8c")
 
-[node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer"]
-self_modulate = Color(1, 0.270588, 0.52549, 1)
-layout_mode = 2
-texture = ExtResource("1_a8x5o")
-expand_mode = 1
+[node name="TextureRect3" type="TextureRect" parent="icon_menu"]
+z_index = 2
+offset_left = 2.0
+offset_top = 184.0
+offset_right = 66.0
+offset_bottom = 244.0
+texture = ExtResource("47_xr5x0")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="icon_menu/MarginContainer"]
-layout_mode = 2
+[node name="TextureRect4" type="TextureRect" parent="icon_menu"]
+z_index = 2
+offset_left = 1.0
+offset_top = 250.0
+offset_right = 65.0
+offset_bottom = 314.0
+texture = ExtResource("50_j883l")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="icon_menu/MarginContainer/HBoxContainer"]
-layout_mode = 2
+[node name="TextureRect5" type="TextureRect" parent="icon_menu"]
+z_index = 2
+offset_left = 9.0
+offset_top = 320.0
+offset_right = 73.0
+offset_bottom = 384.0
+texture = ExtResource("51_pblnv")
 
-[node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("45_nk5fa")
+[node name="TextureRect" type="TextureRect" parent="icon_menu"]
+z_index = 2
+offset_left = 5.0
+offset_top = 42.0
+offset_right = 69.0
+offset_bottom = 106.0
+texture = ExtResource("47_q8str")
 
-[node name="Label" type="Label" parent="icon_menu/MarginContainer/HBoxContainer/VBoxContainer/TextureRect"]
+[node name="Label" type="Label" parent="icon_menu/TextureRect"]
 layout_mode = 0
 offset_left = 69.0
 offset_top = 12.0
@@ -514,10 +571,80 @@ theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 30
 text = "- Car"
 
-[node name="TextureRect2" type="TextureRect" parent="icon_menu/MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("46_7vt8c")
+[node name="MarginContainer" type="MarginContainer" parent="icon_menu"]
+z_index = 1
+offset_top = 39.0
+offset_right = 181.0
+offset_bottom = 119.0
+scale = Vector2(1, 0.875)
 
-[node name="TextureRect3" type="TextureRect" parent="icon_menu/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="icon_menu/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("47_xr5x0")
+
+[node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("51_kgdte")
+
+[node name="MarginContainer2" type="MarginContainer" parent="icon_menu"]
+z_index = 1
+offset_top = 108.0
+offset_right = 181.0
+offset_bottom = 188.0
+scale = Vector2(1, 0.875)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="icon_menu/MarginContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer2"]
+layout_mode = 2
+texture = ExtResource("51_kgdte")
+
+[node name="MarginContainer3" type="MarginContainer" parent="icon_menu"]
+z_index = 1
+offset_top = 178.0
+offset_right = 181.0
+offset_bottom = 258.0
+scale = Vector2(1, 0.875)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="icon_menu/MarginContainer3"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer3"]
+layout_mode = 2
+texture = ExtResource("51_kgdte")
+
+[node name="MarginContainer4" type="MarginContainer" parent="icon_menu"]
+z_index = 1
+offset_top = 248.0
+offset_right = 181.0
+offset_bottom = 328.0
+scale = Vector2(1, 0.875)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="icon_menu/MarginContainer4"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer4"]
+layout_mode = 2
+texture = ExtResource("51_kgdte")
+
+[node name="MarginContainer5" type="MarginContainer" parent="icon_menu"]
+z_index = 1
+offset_top = 318.0
+offset_right = 181.0
+offset_bottom = 398.0
+scale = Vector2(1, 0.875)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="icon_menu/MarginContainer5"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="icon_menu/MarginContainer5"]
+layout_mode = 2
+texture = ExtResource("51_kgdte")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="icon_menu"]
+z_index = 1
+offset_left = 15.0
+offset_top = 50.0
+offset_right = 79.0
+offset_bottom = 629.0
+scale = Vector2(0.8, 0.8)

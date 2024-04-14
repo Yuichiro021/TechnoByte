@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnegdc6warnbo"
-path="res://.godot/imported/car-new.png-d49755497c5785415b16bf591e19a613.ctex"
+uid="uid://dgdws573sw87k"
+path="res://.godot/imported/Cutie.png-54bb0537c58fc248b65482ea43049e0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/icons/car-new.png"
-dest_files=["res://.godot/imported/car-new.png-d49755497c5785415b16bf591e19a613.ctex"]
+source_file="res://resources/level/Cutie.png"
+dest_files=["res://.godot/imported/Cutie.png-54bb0537c58fc248b65482ea43049e0c.ctex"]
 
 [params]
 
