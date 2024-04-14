@@ -44,19 +44,65 @@ func change_points(val):
 	label.text = str(points)
 		
 func win():
-	print("Ai castigat!")
+	judet = get_child(rng.randi_range(0, get_children().size()-1))
+	mesaj_pe_ecran = true
+	timer.stop()
+	timer_random_event.stop()
+	var box := TextureRect.new()
+	var textura = load("res://resources/backgrounds/black.png")
+	box.texture=textura
+	box.z_index = 15
+	box.size = Vector2(400,100)
+	box.position = Vector2(130,200)
+	self.add_child(box)
+	var label := Label.new()
+	label.text = "Ai castigat!"
+	label.add_theme_font_size_override("font_size",15)
+	box.add_child(label)
+	var button := Button.new()
+	button.text="OK"
+	button.position = Vector2(box.size.x-50,box.size.y-50)
+	button.button_down.connect(win_event)
+	box.add_child(button)
+	eventCaller = box
 	
 func lose():
-	print("Ai pierdut!")
+	mesaj_pe_ecran = true
+	timer.stop()
+	timer_random_event.stop()
+	var box := TextureRect.new()
+	var textura = load("res://resources/backgrounds/black.png")
+	box.texture=textura
+	box.z_index = 15
+	box.size = Vector2(400,100)
+	box.position = Vector2(130,200)
+	self.add_child(box)
+	var label := Label.new()
+	label.text = "Ai pierdut!"
+	label.add_theme_font_size_override("font_size",15)
+	box.add_child(label)
+	var button := Button.new()
+	button.text="OK"
+	button.position = Vector2(box.size.x-50,box.size.y-50)
+	button.button_down.connect(lose_event)
+	box.add_child(button)
+	eventCaller = box
+	
+func win_event():
+	get_tree().change_scene_to_file("res://main_menu/main_menu.tscn")
+	
+func lose_event():
+	get_tree().change_scene_to_file("res://main_menu/main_menu.tscn")
 
 func change_reputation(val):
 	if reputation+val>0:
 		reputation+=val
 	else:
+		reputation=0
 		lose()
 	var label := $"../../MarginContainer/VBoxContainer/Label2/Label2" as Label
 	label.text = str(reputation)
-	if reputation>=1000:
+	if reputation>=150:
 		win()
 
 func increase_pollution():
@@ -64,7 +110,7 @@ func increase_pollution():
 	for child in get_children():
 		if child.has_meta("Pollution"):
 			sum+=child.get_meta("Pollution")
-	change_reputation(-sum/50)
+	change_reputation(-sum/100)
 	if !sedii.is_empty():
 		for sediu in sedii:
 			lower_pollution(sediu)
@@ -189,24 +235,29 @@ func meniu_sediu(child):
 	create_sediu_button(-150,50,buton_factory,"res://resources/icons/factory.png",child)
 
 func buton_car():
-	change_points(-4)
-	change_reputation(4)
+	if points>=4:
+		change_points(-4)
+		change_reputation(4)
 
 func buton_tree():
-	change_points(-2)
-	change_reputation(2)
+	if points>=2:
+		change_points(-2)
+		change_reputation(2)
 
 func buton_pesticide():
-	change_points(-3)
-	change_reputation(3)
+	if points>=3:
+		change_points(-3)
+		change_reputation(3)
 
 func buton_water():
-	change_points(-5)
-	change_reputation(5)
+	if points>=5:
+		change_points(-5)
+		change_reputation(5)
 
 func buton_factory():
-	change_points(-6)
-	change_reputation(6)
+	if points>=6:
+		change_points(-6)
+		change_reputation(6)
 
 var eventCaller = null
 
