@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://duriewur2gonr"]
+[gd_scene load_steps=53 format=3 uid="uid://duriewur2gonr"]
 
 [ext_resource type="Texture2D" uid="uid://d0167ut5lwf74" path="res://resources/backgrounds/white.png" id="1_a8x5o"]
 [ext_resource type="Texture2D" uid="uid://bqpg0jp0dhqrw" path="res://resources/level/HartaRo.png" id="2_7b3rj"]
@@ -51,6 +51,7 @@
 [ext_resource type="Texture2D" uid="uid://bm5xntjty5few" path="res://resources/icons/water.png" id="50_j883l"]
 [ext_resource type="Texture2D" uid="uid://br1ggnd7j6ce7" path="res://resources/level/cutie3.png" id="51_kgdte"]
 [ext_resource type="Texture2D" uid="uid://rgxk7xhqs2xb" path="res://resources/icons/factory.png" id="51_pblnv"]
+[ext_resource type="Texture2D" uid="uid://idgopyv5awun" path="res://resources/main_menu/green_main_menu.png" id="52_qkk5f"]
 
 [node name="Node" type="Node"]
 
@@ -536,6 +537,26 @@ offset_right = 66.0
 offset_bottom = 174.0
 texture = ExtResource("46_7vt8c")
 
+[node name="Label" type="Label" parent="icon_menu/TextureRect2"]
+offset_left = 69.0
+offset_top = 12.0
+offset_right = 272.0
+offset_bottom = 54.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "Plantează 
+copaci"
+
+[node name="Label" type="Label" parent="icon_menu/TextureRect2/Label"]
+offset_left = 81.0
+offset_right = 173.0
+offset_bottom = 35.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 25
+text = "2"
+
 [node name="TextureRect3" type="TextureRect" parent="icon_menu"]
 z_index = 2
 offset_left = 2.0
@@ -543,6 +564,27 @@ offset_top = 184.0
 offset_right = 66.0
 offset_bottom = 244.0
 texture = ExtResource("47_xr5x0")
+
+[node name="Label" type="Label" parent="icon_menu/TextureRect3"]
+offset_left = 69.0
+offset_top = 12.0
+offset_right = 211.0
+offset_bottom = 59.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "Redu 
+pesticidele"
+
+[node name="Label" type="Label" parent="icon_menu/TextureRect3/Label"]
+offset_left = 81.0
+offset_right = 153.0
+offset_bottom = 35.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 25
+text = "3
+"
 
 [node name="TextureRect4" type="TextureRect" parent="icon_menu"]
 z_index = 2
@@ -552,6 +594,26 @@ offset_right = 65.0
 offset_bottom = 314.0
 texture = ExtResource("50_j883l")
 
+[node name="Label" type="Label" parent="icon_menu/TextureRect4"]
+offset_left = 69.0
+offset_top = 12.0
+offset_right = 272.0
+offset_bottom = 54.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "Epurează 
+apa"
+
+[node name="Label" type="Label" parent="icon_menu/TextureRect4/Label"]
+offset_left = 82.0
+offset_right = 132.0
+offset_bottom = 35.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 25
+text = "5"
+
 [node name="TextureRect5" type="TextureRect" parent="icon_menu"]
 z_index = 2
 offset_left = 9.0
@@ -559,6 +621,26 @@ offset_top = 320.0
 offset_right = 73.0
 offset_bottom = 384.0
 texture = ExtResource("51_pblnv")
+
+[node name="Label" type="Label" parent="icon_menu/TextureRect5"]
+offset_left = 69.0
+offset_top = 12.0
+offset_right = 272.0
+offset_bottom = 54.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "Redu 
+fabricile"
+
+[node name="Label" type="Label" parent="icon_menu/TextureRect5/Label"]
+offset_left = 74.0
+offset_right = 144.0
+offset_bottom = 35.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 25
+text = "6"
 
 [node name="TextureRect" type="TextureRect" parent="icon_menu"]
 z_index = 2
@@ -572,12 +654,27 @@ texture = ExtResource("47_q8str")
 layout_mode = 0
 offset_left = 69.0
 offset_top = 12.0
-offset_right = 112.0
-offset_bottom = 69.0
+offset_right = 272.0
+offset_bottom = 54.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 30
-text = "- Car"
+theme_override_font_sizes/font_size = 15
+text = "Redu 
+mașinile"
+
+[node name="Label" type="Label" parent="icon_menu/TextureRect/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_right = 0.35
+offset_left = 4.95
+offset_top = -1.0
+offset_right = 62.95
+offset_bottom = 35.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 25
+text = "4"
 
 [node name="MarginContainer" type="MarginContainer" parent="icon_menu"]
 z_index = 1
@@ -656,3 +753,9 @@ offset_top = 50.0
 offset_right = 79.0
 offset_bottom = 629.0
 scale = Vector2(0.8, 0.8)
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+z_index = -1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("52_qkk5f")
