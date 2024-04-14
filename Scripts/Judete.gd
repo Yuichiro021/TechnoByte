@@ -42,14 +42,22 @@ func change_points(val):
 		points+=val
 	var label := $"../../MarginContainer/VBoxContainer/Label/Label2" as Label
 	label.text = str(points)
+		
+func win():
+	print("Ai castigat!")
+	
+func lose():
+	print("Ai pierdut!")
 
 func change_reputation(val):
 	if reputation+val>0:
 		reputation+=val
 	else:
-		reputation = 0
+		lose()
 	var label := $"../../MarginContainer/VBoxContainer/Label2/Label2" as Label
 	label.text = str(reputation)
+	if reputation>=1000:
+		win()
 
 func increase_pollution():
 	var sum=0
@@ -202,15 +210,24 @@ func buton_factory():
 
 var eventCaller = null
 
-var event_list = [[event1, ""]]
+var event_list = [[event1, "S-a deschis o termocentrala nouă"],
+					[event2, "S-au deversat deșeuri în apă"],
+					[event3, "Blocaj în trafic"],
+					[event4, "Utilizare crescută de pesticide"],
+					[event5, "Distrugere spații verzi"],
+					[event6, "S-a organizat o campanie locală de reciclare"],
+					[event7, "Inovare tehnologică. Mașini mai eficiente"],
+					[event8, "Investiții în energie verde"],
+					[event9, "Agricultură bio. Fermierii au decis să producă bio"]]
 
 func generate_event():
 	var event = event_list[rng.randi_range(0,event_list.size()-1)]
 	createMessage(event[0],event[1])
 	timer_random_event.wait_time = rng.randi_range(10, 20)
 	
-
+var judet
 func createMessage(event,text):
+	judet = get_child(rng.randi_range(0, get_children().size()-1))
 	mesaj_pe_ecran = true
 	timer.stop()
 	timer_random_event.stop()
@@ -222,7 +239,7 @@ func createMessage(event,text):
 	box.position = Vector2(130,200)
 	self.add_child(box)
 	var label := Label.new()
-	label.text = text
+	label.text = judet.name+": "+text
 	label.add_theme_font_size_override("font_size",15)
 	box.add_child(label)
 	var button := Button.new()
@@ -232,9 +249,15 @@ func createMessage(event,text):
 	box.add_child(button)
 	eventCaller = box
 
+func change_pollution(judet : Sprite2D,val):
+	judet.set_meta("Pollution",judet.get_meta("Pollution")+val)
+	judet.self_modulate = Color(118.0/255.0, 137.0/255.0, 72.0/255.0, float(judet.get_meta("Pollution"))/20.0)
+
 func event1():
 	if eventCaller != null:
 		eventCaller.queue_free()
+	
+	change_pollution(judet,6)
 	mesaj_pe_ecran=false
 	timer.start()
 	timer_random_event.start()
@@ -242,6 +265,7 @@ func event1():
 func event2():
 	if eventCaller != null:
 		eventCaller.queue_free()
+	change_pollution(judet,5)
 	mesaj_pe_ecran=false
 	timer.start()
 	timer_random_event.start()
@@ -249,6 +273,7 @@ func event2():
 func event3():
 	if eventCaller != null:
 		eventCaller.queue_free()
+	change_pollution(judet,2)
 	mesaj_pe_ecran=false
 	timer.start()
 	timer_random_event.start()
@@ -256,6 +281,7 @@ func event3():
 func event4():
 	if eventCaller != null:
 		eventCaller.queue_free()
+	change_pollution(judet,3)
 	mesaj_pe_ecran=false
 	timer.start()
 	timer_random_event.start()
@@ -263,6 +289,39 @@ func event4():
 func event5():
 	if eventCaller != null:
 		eventCaller.queue_free()
+	change_pollution(judet,4)
+	mesaj_pe_ecran=false
+	timer.start()
+	timer_random_event.start()
+
+func event6():
+	if eventCaller != null:
+		eventCaller.queue_free()
+	change_pollution(judet,-2)
+	mesaj_pe_ecran=false
+	timer.start()
+	timer_random_event.start()
+	
+func event7():
+	if eventCaller != null:
+		eventCaller.queue_free()
+	change_pollution(judet,-3)
+	mesaj_pe_ecran=false
+	timer.start()
+	timer_random_event.start()
+	
+func event8():
+	if eventCaller != null:
+		eventCaller.queue_free()
+	change_pollution(judet,-4)
+	mesaj_pe_ecran=false
+	timer.start()
+	timer_random_event.start()
+
+func event9():
+	if eventCaller != null:
+		eventCaller.queue_free()
+	change_pollution(judet,-5)
 	mesaj_pe_ecran=false
 	timer.start()
 	timer_random_event.start()
