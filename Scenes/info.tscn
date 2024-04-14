@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://coj8k14flr3tl"]
+
+[ext_resource type="Script" path="res://Scripts/info.gd" id="1_8ekeu"]
+[ext_resource type="Texture2D" uid="uid://idgopyv5awun" path="res://resources/main_menu/green_main_menu.png" id="1_wy4r1"]
+[ext_resource type="Script" path="res://Scripts/RichTextLabel.gd" id="2_8b7i5"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8ekeu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wy4r1")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Separator2" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+bbcode_enabled = true
+text = "	EcoGuardian este un joc de strategie și învățare prin intermediul căreia este simulată o campanie de ecologizare pe care utilizatorul o coordonează. Jocul pornește cu harta unei țări în care nivelul de poluare crește, iar jucătorul își selectează regiunea în care va avea baza. Acesta trebuie să ia decizii pentru a-și crește reputația și a ecologiza zona. 	Fiecare decizie îl costă pe jucător puncte eco. Ulterior, jucătorul își extinde campania, scopul fiind reducerea substanțială a nivelului de poluare din țară.
+Opțiuni:
+- redu numărul de mașini
+- plantează copaci
+- redu pesticidele
+- epureaza apa
+- redu numarul fabricilor
+Experimenteaza si ecologizeaza lumea!
+ Multa bafta!
+
+Developed by: TechnoByte, 2024
+Icons by: [url=http://icons8.com/icons] Icons8[/url]"
+fit_content = true
+script = ExtResource("2_8b7i5")
+
+[node name="Separator3" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="back_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.801758
+anchor_top = 0.751736
+anchor_right = 0.967773
+anchor_bottom = 0.954861
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 60
+text = "Back"
+metadata/_edit_use_anchors_ = true

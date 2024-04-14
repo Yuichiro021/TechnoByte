@@ -6,6 +6,8 @@ extends Node2D
 @onready var timer = $"../../Timer" as Timer
 @onready var timer_random_event = $"../../Timer_random_event" as Timer
 
+@onready var back_button = $"../../back_button" as Button
+
 
 @onready var points = 5
 
@@ -25,9 +27,13 @@ func _ready():
 		child.set_meta("sediu",false)
 	#for child in get_children():
 	#	print(child.name," ",child.get_meta("Pollution"))
+	back_button.button_down.connect(back_button_press)
 	timer.connect("timeout",increase_pollution)
 	timer_random_event.wait_time = rng.randi_range(10, 20)
 	timer_random_event.connect("timeout",generate_event)
+
+func back_button_press():
+	get_tree().change_scene_to_file("res://main_menu/main_menu.tscn")
 
 var sedii=[]
 
