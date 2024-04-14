@@ -760,3 +760,6 @@ offset_top = 50.0
 offset_right = 79.0
 offset_bottom = 629.0
 scale = Vector2(0.8, 0.8)
+
+[node name="Timer_random_event" type="Timer" parent="."]
+wait_time = 60.0

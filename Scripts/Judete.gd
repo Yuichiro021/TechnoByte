@@ -4,12 +4,16 @@ extends Node2D
 @onready var rng = RandomNumberGenerator.new()
 
 @onready var timer = $"../../Timer" as Timer
+@onready var timer_random_event = $"../../Timer_random_event" as Timer
+
 
 @onready var points = 5
 
 @onready var reputation=10
 
 var mesaj_pe_ecran = false
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,6 +26,8 @@ func _ready():
 	#for child in get_children():
 	#	print(child.name," ",child.get_meta("Pollution"))
 	timer.connect("timeout",increase_pollution)
+	timer_random_event.wait_time = rng.randi_range(10, 20)
+	timer_random_event.connect("timeout",generate_event)
 
 var sedii=[]
 
@@ -75,6 +81,7 @@ var sediu_exista = false
 func create_sediu():
 	if sediu_exista:
 		change_points(-10)
+		timer_random_event.start()
 	sedii.append(child1)
 	sediu_exista = true
 	var sediu := TextureRect.new()
@@ -83,6 +90,7 @@ func create_sediu():
 	child1.add_child(sediu)
 	child1.set_meta("sediu",true)
 	timer.start()
+	timer_random_event.start()
 
 func clear_all_buttons():
 	var ok=true
@@ -186,8 +194,18 @@ func buton_factory():
 
 var eventCaller = null
 
+var event_list = [[event1, ""]]
+
+func generate_event():
+	var event = event_list[rng.randi_range(0,event_list.size()-1)]
+	createMessage(event[0],event[1])
+	timer_random_event.wait_time = rng.randi_range(10, 20)
+	
+
 func createMessage(event,text):
 	mesaj_pe_ecran = true
+	timer.stop()
+	timer_random_event.stop()
 	var box := TextureRect.new()
 	var textura = load("res://resources/backgrounds/black.png")
 	box.texture=textura
@@ -207,21 +225,36 @@ func createMessage(event,text):
 	eventCaller = box
 
 func event1():
-	eventCaller.queue_free()
+	if eventCaller != null:
+		eventCaller.queue_free()
 	mesaj_pe_ecran=false
+	timer.start()
+	timer_random_event.start()
 	
 func event2():
-	eventCaller.queue_free()
+	if eventCaller != null:
+		eventCaller.queue_free()
 	mesaj_pe_ecran=false
+	timer.start()
+	timer_random_event.start()
 	
 func event3():
-	eventCaller.queue_free()
+	if eventCaller != null:
+		eventCaller.queue_free()
 	mesaj_pe_ecran=false
+	timer.start()
+	timer_random_event.start()
 	
 func event4():
-	eventCaller.queue_free()
+	if eventCaller != null:
+		eventCaller.queue_free()
 	mesaj_pe_ecran=false
+	timer.start()
+	timer_random_event.start()
 	
 func event5():
-	eventCaller.queue_free()
+	if eventCaller != null:
+		eventCaller.queue_free()
 	mesaj_pe_ecran=false
+	timer.start()
+	timer_random_event.start()
