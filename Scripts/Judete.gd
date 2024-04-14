@@ -23,7 +23,7 @@ func _ready():
 	change_reputation(0)
 	for child in get_children():
 		child.set_meta("Pollution",rng.randi_range(3,10))
-		child.self_modulate = Color(118.0/255.0, 137.0/255.0, 72.0/255.0, float(child.get_meta("Pollution"))/20.0)
+		child.self_modulate = Color(147.0/255.0, 102.0/255.0, 57.0/255.0, float(child.get_meta("Pollution"))/20.0)
 		child.set_meta("sediu",false)
 	#for child in get_children():
 	#	print(child.name," ",child.get_meta("Pollution"))
@@ -57,11 +57,12 @@ func win():
 	self.add_child(box)
 	var label := Label.new()
 	label.text = "Ai castigat!"
-	label.add_theme_font_size_override("font_size",15)
+	label.add_theme_font_size_override("font_size",24)
 	box.add_child(label)
 	var button := Button.new()
 	button.text="OK"
 	button.position = Vector2(box.size.x-50,box.size.y-50)
+	button.size = Vector2(50,50)
 	button.button_down.connect(win_event)
 	box.add_child(button)
 	eventCaller = box
@@ -79,10 +80,11 @@ func lose():
 	self.add_child(box)
 	var label := Label.new()
 	label.text = "Ai pierdut!"
-	label.add_theme_font_size_override("font_size",15)
+	label.add_theme_font_size_override("font_size",24)
 	box.add_child(label)
 	var button := Button.new()
 	button.text="OK"
+	button.size = Vector2(50,50)
 	button.position = Vector2(box.size.x-50,box.size.y-50)
 	button.button_down.connect(lose_event)
 	box.add_child(button)
@@ -118,7 +120,7 @@ func increase_pollution():
 	var sprite = get_child(rng.randi_range(0, get_children().size()-1))
 	sprite.set_meta("Pollution",sprite.get_meta("Pollution") +1)
 	print(sprite.name, " ", sprite.get_meta("Pollution"))
-	sprite.self_modulate = Color(118.0/255.0, 137.0/255.0, 72.0/255.0, float(sprite.get_meta("Pollution"))/20.0)
+	sprite.self_modulate = Color(147.0/255.0, 102.0/255.0, 57.0/255.0, float(sprite.get_meta("Pollution"))/20.0)
 	change_reputation(0)
 	var rand = randi_range(1,5)
 	
@@ -127,7 +129,7 @@ func lower_pollution(sprite):
 	if sprite.get_meta("Pollution") >0:
 		sprite.set_meta("Pollution",sprite.get_meta("Pollution")-1)
 		change_points(1)
-		sprite.self_modulate = Color(118.0/255.0, 137.0/255.0, 72.0/255.0, float(sprite.get_meta("Pollution"))/20.0)
+		sprite.self_modulate = Color(147.0/255.0, 102.0/255.0, 57.0/255.0, float(sprite.get_meta("Pollution"))/20.0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -261,15 +263,15 @@ func buton_factory():
 
 var eventCaller = null
 
-var event_list = [[event1, "S-a deschis o termocentrala nouă"],
-					[event2, "S-au deversat deșeuri în apă"],
+var event_list = [[event1, "S-a deschis o \ntermocentrala nouă"],
+					[event2, "S-au deversat \ndeșeuri în apă"],
 					[event3, "Blocaj în trafic"],
-					[event4, "Utilizare crescută de pesticide"],
+					[event4, "Utilizare crescută \nde pesticide"],
 					[event5, "Distrugere spații verzi"],
-					[event6, "S-a organizat o campanie locală de reciclare"],
-					[event7, "Inovare tehnologică. Mașini mai eficiente"],
+					[event6, "S-a organizat o campanie \nlocală de reciclare"],
+					[event7, "Inovare tehnologică. \nMașini mai eficiente"],
 					[event8, "Investiții în energie verde"],
-					[event9, "Agricultură bio. Fermierii au decis să producă bio"]]
+					[event9, "Agricultură bio. \nFermierii au decis să producă bio"]]
 
 func generate_event():
 	var event = event_list[rng.randi_range(0,event_list.size()-1)]
@@ -291,10 +293,11 @@ func createMessage(event,text):
 	self.add_child(box)
 	var label := Label.new()
 	label.text = judet.name+": "+text
-	label.add_theme_font_size_override("font_size",15)
+	label.add_theme_font_size_override("font_size",24)
 	box.add_child(label)
 	var button := Button.new()
 	button.text="OK"
+	button.size = Vector2(50,50)
 	button.position = Vector2(box.size.x-50,box.size.y-50)
 	button.button_down.connect(event)
 	box.add_child(button)
@@ -302,7 +305,7 @@ func createMessage(event,text):
 
 func change_pollution(judet : Sprite2D,val):
 	judet.set_meta("Pollution",judet.get_meta("Pollution")+val)
-	judet.self_modulate = Color(118.0/255.0, 137.0/255.0, 72.0/255.0, float(judet.get_meta("Pollution"))/20.0)
+	judet.self_modulate = Color(147.0/255.0, 102.0/255.0, 57.0/255.0, float(judet.get_meta("Pollution"))/20.0)
 
 func event1():
 	if eventCaller != null:
