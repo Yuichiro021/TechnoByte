@@ -1,6 +1,5 @@
-[gd_scene load_steps=53 format=3 uid="uid://duriewur2gonr"]
+[gd_scene load_steps=52 format=3 uid="uid://duriewur2gonr"]
 
-[ext_resource type="Texture2D" uid="uid://d0167ut5lwf74" path="res://resources/backgrounds/white.png" id="1_a8x5o"]
 [ext_resource type="Texture2D" uid="uid://bqpg0jp0dhqrw" path="res://resources/level/HartaRo.png" id="2_7b3rj"]
 [ext_resource type="Texture2D" uid="uid://b6o8ryj1de2xv" path="res://resources/level/TM.png" id="2_c3i3c"]
 [ext_resource type="Script" path="res://Scripts/Judete.gd" id="2_hr183"]
@@ -62,7 +61,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_a8x5o")
+texture = ExtResource("52_qkk5f")
 expand_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -538,6 +537,7 @@ offset_bottom = 174.0
 texture = ExtResource("46_7vt8c")
 
 [node name="Label" type="Label" parent="icon_menu/TextureRect2"]
+layout_mode = 0
 offset_left = 69.0
 offset_top = 12.0
 offset_right = 272.0
@@ -549,6 +549,7 @@ text = "Plantează
 copaci"
 
 [node name="Label" type="Label" parent="icon_menu/TextureRect2/Label"]
+layout_mode = 0
 offset_left = 81.0
 offset_right = 173.0
 offset_bottom = 35.0
@@ -566,6 +567,7 @@ offset_bottom = 244.0
 texture = ExtResource("47_xr5x0")
 
 [node name="Label" type="Label" parent="icon_menu/TextureRect3"]
+layout_mode = 0
 offset_left = 69.0
 offset_top = 12.0
 offset_right = 211.0
@@ -577,6 +579,7 @@ text = "Redu
 pesticidele"
 
 [node name="Label" type="Label" parent="icon_menu/TextureRect3/Label"]
+layout_mode = 0
 offset_left = 81.0
 offset_right = 153.0
 offset_bottom = 35.0
@@ -595,6 +598,7 @@ offset_bottom = 314.0
 texture = ExtResource("50_j883l")
 
 [node name="Label" type="Label" parent="icon_menu/TextureRect4"]
+layout_mode = 0
 offset_left = 69.0
 offset_top = 12.0
 offset_right = 272.0
@@ -606,6 +610,7 @@ text = "Epurează
 apa"
 
 [node name="Label" type="Label" parent="icon_menu/TextureRect4/Label"]
+layout_mode = 0
 offset_left = 82.0
 offset_right = 132.0
 offset_bottom = 35.0
@@ -623,6 +628,7 @@ offset_bottom = 384.0
 texture = ExtResource("51_pblnv")
 
 [node name="Label" type="Label" parent="icon_menu/TextureRect5"]
+layout_mode = 0
 offset_left = 69.0
 offset_top = 12.0
 offset_right = 272.0
@@ -634,6 +640,7 @@ text = "Redu
 fabricile"
 
 [node name="Label" type="Label" parent="icon_menu/TextureRect5/Label"]
+layout_mode = 0
 offset_left = 74.0
 offset_right = 144.0
 offset_bottom = 35.0
@@ -753,9 +760,3 @@ offset_top = 50.0
 offset_right = 79.0
 offset_bottom = 629.0
 scale = Vector2(0.8, 0.8)
-
-[node name="TextureRect3" type="TextureRect" parent="."]
-z_index = -1
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("52_qkk5f")
