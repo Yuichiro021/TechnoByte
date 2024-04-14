@@ -28,13 +28,13 @@ var sedii=[]
 func change_points(val):
 	if points+val>0:
 		points+=val
-	var label := $"../../side_menu/MarginContainer/VBoxContainer/Label/Label2" as Label
+	var label := $"../../MarginContainer/VBoxContainer/Label/Label2" as Label
 	label.text = str(points)
 
 func change_reputation(val):
 	if reputation+val>0:
 		reputation+=val
-	var label := $"../../side_menu/MarginContainer/VBoxContainer/Label2/Label2" as Label
+	var label := $"../../MarginContainer/VBoxContainer/Label2/Label2" as Label
 	label.text = str(reputation)
 
 func increase_pollution():

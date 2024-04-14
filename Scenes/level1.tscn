@@ -56,9 +56,11 @@
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 z_index = -1
-offset_top = 1.0
-offset_right = 1024.0
-offset_bottom = 579.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_a8x5o")
 expand_mode = 1
 
@@ -446,23 +448,26 @@ wait_time = 2.0
 [node name="side_menu" type="Node2D" parent="."]
 position = Vector2(866, 21)
 
-[node name="MarginContainer" type="MarginContainer" parent="side_menu"]
-offset_left = -33.0
-offset_right = 192.0
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -225.0
 offset_bottom = 239.0
+grow_horizontal = 0
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="VBoxContainer" type="VBoxContainer" parent="side_menu/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Separator" type="Control" parent="side_menu/MarginContainer/VBoxContainer"]
+[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="side_menu/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -472,7 +477,7 @@ text = "Points:           "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="side_menu/MarginContainer/VBoxContainer/Label"]
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Label"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -490,7 +495,7 @@ theme_override_constants/outline_size = 12
 theme_override_font_sizes/font_size = 24
 text = "0"
 
-[node name="Label2" type="Label" parent="side_menu/MarginContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -500,7 +505,7 @@ text = "Reputation:           "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="side_menu/MarginContainer/VBoxContainer/Label2"]
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Label2"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.734
