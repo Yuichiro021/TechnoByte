@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dsxkq8fbcaq2i"]
 
 [ext_resource type="Script" path="res://main_menu/main_menu.gd" id="1_4e3m5"]
-[ext_resource type="Texture2D" uid="uid://cfjcgp8krdn86" path="res://resources/main_menu/menu_background.png" id="1_y7c3y"]
+[ext_resource type="Texture2D" uid="uid://idgopyv5awun" path="res://resources/main_menu/green_main_menu.png" id="2_4163k"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_y7c3y")
+texture = ExtResource("2_4163k")
 expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -46,7 +46,7 @@ layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_font_sizes/font_size = 64
-text = "Game Title"
+text = "Eco Guardian"
 horizontal_alignment = 1
 vertical_alignment = 1
 
