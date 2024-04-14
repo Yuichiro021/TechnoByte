@@ -9,12 +9,14 @@ extends Node2D
 
 @onready var reputation=10
 
+var mesaj_pe_ecran = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var label := $"../../side_menu/MarginContainer/VBoxContainer/Label/Label2" as Label
-	label.text = str(points)
+	change_points(0)
+	change_reputation(0)
 	for child in get_children():
-		child.set_meta("Pollution",rng.randi_range(5,15))
+		child.set_meta("Pollution",rng.randi_range(3,10))
 		child.self_modulate = Color(118.0/255.0, 137.0/255.0, 72.0/255.0, float(child.get_meta("Pollution"))/20.0)
 		child.set_meta("sediu",false)
 	#for child in get_children():
@@ -23,22 +25,40 @@ func _ready():
 
 var sedii=[]
 
+func change_points(val):
+	if points+val>0:
+		points+=val
+	var label := $"../../side_menu/MarginContainer/VBoxContainer/Label/Label2" as Label
+	label.text = str(points)
+
+func change_reputation(val):
+	if reputation+val>0:
+		reputation+=val
+	var label := $"../../side_menu/MarginContainer/VBoxContainer/Label2/Label2" as Label
+	label.text = str(reputation)
+
 func increase_pollution():
+	var sum=0
+	for child in get_children():
+		if child.has_meta("Pollution"):
+			sum+=child.get_meta("Pollution")
+	change_reputation(-sum/50)
 	if !sedii.is_empty():
 		for sediu in sedii:
 			lower_pollution(sediu)
-	points += randi_range(1, 7)
+	change_points(randi_range(1, 7)+len(sedii))
 	var sprite = get_child(rng.randi_range(0, get_children().size()-1))
 	sprite.set_meta("Pollution",sprite.get_meta("Pollution") +1)
 	print(sprite.name, " ", sprite.get_meta("Pollution"))
 	sprite.self_modulate = Color(118.0/255.0, 137.0/255.0, 72.0/255.0, float(sprite.get_meta("Pollution"))/20.0)
+	change_reputation(0)
+	var rand = randi_range(1,5)
+	
 
 func lower_pollution(sprite):
 	if sprite.get_meta("Pollution") >0:
-		points += 1
 		sprite.set_meta("Pollution",sprite.get_meta("Pollution")-1)
-		var label := $"../../side_menu/MarginContainer/VBoxContainer/Label/Label2" as Label
-		label.text = str(points)
+		change_points(1)
 		sprite.self_modulate = Color(118.0/255.0, 137.0/255.0, 72.0/255.0, float(sprite.get_meta("Pollution"))/20.0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -53,7 +73,8 @@ var child1 = null
 var sediu_exista = false
 
 func create_sediu():
-	points-=10
+	if sediu_exista:
+		change_points(-10)
 	sedii.append(child1)
 	sediu_exista = true
 	var sediu := TextureRect.new()
@@ -75,7 +96,7 @@ func clear_all_buttons():
 			ok=false
 	return ok
 func _input(event):
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index==MOUSE_BUTTON_LEFT:
+	if event is InputEventMouseButton and event.is_pressed() and event.button_index==MOUSE_BUTTON_LEFT and not mesaj_pe_ecran:
 		for child in get_children():
 			if child is Sprite2D:
 				var collision_polygon = child.get_node("CollisionPolygon2D")
@@ -85,8 +106,9 @@ func _input(event):
 						global_points.append(point+ child.global_position)
 					if is_point_inside_concave_shape(event.position,global_points):
 						if(clear_all_buttons()):
-							if child.get_meta("sediu")==false and points>=10 and sediu_exista==false:
+							if child.get_meta("sediu")==false and (sediu_exista==false or points>=10):
 								print("Clicked on: ",child.get_name())
+								
 								create_child_button(child)
 							if sediu_exista==true and child.get_meta("sediu")==true:
 								meniu_sediu(child)
@@ -143,32 +165,63 @@ func meniu_sediu(child):
 	create_sediu_button(-150,50,buton_factory,"res://resources/icons/factory.png",child)
 
 func buton_car():
-	if points >= 4:
-		points-=4
-		reputation+=4
-	pass
+	change_points(-4)
+	change_reputation(4)
 
 func buton_tree():
-	if points >=2:
-		points-=2
-		reputation+=2
-	pass
+	change_points(-2)
+	change_reputation(2)
 
 func buton_pesticide():
-	if points>=3 :
-		points-=3
-		reputation+=3
-	pass
+	change_points(-3)
+	change_reputation(3)
 
 func buton_water():
-	if points >=5:
-		points-=5
-		reputation+=5
-	
-	pass
+	change_points(-5)
+	change_reputation(5)
 
 func buton_factory():
-	if points >=6:
-		points -=6
-		reputation+=6
-	pass
+	change_points(-6)
+	change_reputation(6)
+
+var eventCaller = null
+
+func createMessage(event,text):
+	mesaj_pe_ecran = true
+	var box := TextureRect.new()
+	var textura = load("res://resources/backgrounds/black.png")
+	box.texture=textura
+	box.z_index = 15
+	box.size = Vector2(400,100)
+	box.position = Vector2(130,200)
+	self.add_child(box)
+	var label := Label.new()
+	label.text = text
+	label.add_theme_font_size_override("font_size",15)
+	box.add_child(label)
+	var button := Button.new()
+	button.text="OK"
+	button.position = Vector2(box.size.x-50,box.size.y-50)
+	button.button_down.connect(event)
+	box.add_child(button)
+	eventCaller = box
+
+func event1():
+	eventCaller.queue_free()
+	mesaj_pe_ecran=false
+	
+func event2():
+	eventCaller.queue_free()
+	mesaj_pe_ecran=false
+	
+func event3():
+	eventCaller.queue_free()
+	mesaj_pe_ecran=false
+	
+func event4():
+	eventCaller.queue_free()
+	mesaj_pe_ecran=false
+	
+func event5():
+	eventCaller.queue_free()
+	mesaj_pe_ecran=false
