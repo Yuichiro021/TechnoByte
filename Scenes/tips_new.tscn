@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d4a0whxj0aayi"]
 
 [ext_resource type="Script" path="res://Scripts/tips_new.gd" id="1_vmpfg"]
-[ext_resource type="Texture2D" uid="uid://cfjcgp8krdn86" path="res://resources/main_menu/menu_background.png" id="2_cic4p"]
+[ext_resource type="Texture2D" uid="uid://idgopyv5awun" path="res://resources/main_menu/green_main_menu.png" id="2_rf5xc"]
 
 [node name="tips_new" type="Control"]
 layout_mode = 3
@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_cic4p")
+texture = ExtResource("2_rf5xc")
 expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
